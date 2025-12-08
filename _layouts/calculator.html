@@ -16,9 +16,9 @@ layout: default
     </div>
     
     <div class="related-calculators">
-        <h3>Related Calculators</h3>
+        <h3>Calcolatori Correlati</h3>
         <ul>
-        {% for calc in site.calculators limit:5 %}
+        {% for calc in site.calcolatori limit:5 %}
             {% if calc.url != page.url %}
             <li><a href="{{ calc.url | relative_url }}">{{ calc.title }}</a></li>
             {% endif %}
