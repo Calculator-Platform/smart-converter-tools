@@ -1,0 +1,256 @@
+---
+layout: default
+title: Free Online Calculators & Converters
+description: Professional calculators and conversion tools for currency, salary, mortgage, and more. Fast, accurate, and completely free.
+---
+
+<div class="homepage">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Free Online Calculators & Converters</h1>
+        <p class="hero-subtitle">Professional tools for everyday calculations. Fast, accurate, and completely free.</p>
+    </section>
+
+    <!-- Calculator Categories -->
+    <section class="calculator-categories">
+        <h2>Popular Categories</h2>
+        
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>💱 Currency Converters</h3>
+                <p>Convert between major world currencies with real-time rates</p>
+                <ul>
+                    <li><a href="{{ '/calculators/eur-to-usd-converter/' | relative_url }}">EUR to USD</a></li>
+                    <li><a href="{{ '/calculators/usd-to-eur-converter/' | relative_url }}">USD to EUR</a></li>
+                    <li><a href="{{ '/calculators/gbp-to-eur-converter/' | relative_url }}">GBP to EUR</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <h3>💰 Financial Calculators</h3>
+                <p>Plan your finances with professional calculation tools</p>
+                <ul>
+                    <li><a href="{{ '/calculators/salary-calculator-italy/' | relative_url }}">Salary Calculator</a></li>
+                    <li><a href="{{ '/calculators/tax-calculator-italy/' | relative_url }}">Tax Calculator</a></li>
+                    <li><a href="{{ '/calculators/investment-return-calculator/' | relative_url }}">Investment Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <h3>🏠 Mortgage & Loans</h3>
+                <p>Calculate loan payments and mortgage affordability</p>
+                <ul>
+                    <li><a href="{{ '/calculators/mortgage-calculator-italy/' | relative_url }}">Mortgage Calculator</a></li>
+                    <li><a href="{{ '/calculators/loan-calculator/' | relative_url }}">Loan Calculator</a></li>
+                    <li><a href="{{ '/calculators/refinance-calculator/' | relative_url }}">Refinance Calculator</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <h3>📊 Business Tools</h3>
+                <p>Essential calculators for business professionals</p>
+                <ul>
+                    <li><a href="{{ '/calculators/vat-calculator-italy/' | relative_url }}">VAT Calculator</a></li>
+                    <li><a href="{{ '/calculators/profit-margin-calculator/' | relative_url }}">Profit Margin</a></li>
+                    <li><a href="{{ '/calculators/roi-calculator/' | relative_url }}">ROI Calculator</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>Why Use Our Calculators?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>⚡ Fast & Simple</h3>
+                <p>Get instant results with our easy-to-use interface. No registration required.</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Accurate</h3>
+                <p>Professional-grade calculations you can trust for important financial decisions.</p>
+            </div>
+            <div class="feature">
+                <h3>📱 Mobile Friendly</h3>
+                <p>Use our calculators on any device - desktop, tablet, or smartphone.</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 Private</h3>
+                <p>All calculations happen in your browser. We don't store your data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content -->
+    <section class="content-section">
+        <h2>Professional Calculation Tools for Everyone</h2>
+        <p>Our collection of free online calculators helps you make informed decisions about your finances, business, and daily life. Whether you're converting currencies for international travel, calculating your net salary, or planning a mortgage, we provide accurate and easy-to-use tools.</p>
+        
+        <p>All our calculators are designed with simplicity in mind. Enter your numbers, click calculate, and get instant results. No complicated formulas to understand, no software to download. Everything works directly in your web browser on any device.</p>
+        
+        <p>From currency conversion to mortgage calculations, tax estimates to investment returns, our tools cover the most common calculations people need in their financial lives. Each calculator includes helpful information to guide you through the process and understand your results.</p>
+    </section>
+</div>
+
+<style>
+.homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0 4rem;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Calculator Categories */
+.calculator-categories {
+    margin-bottom: 4rem;
+}
+
+.calculator-categories h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-card {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.category-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.category-card p {
+    color: var(--text-light);
+    margin-bottom: 1.25rem;
+    font-size: 0.9375rem;
+}
+
+.category-card ul {
+    list-style: none;
+}
+
+.category-card li {
+    margin-bottom: 0.5rem;
+}
+
+.category-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.category-card a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+    margin-bottom: 4rem;
+    padding: 3rem 0;
+    background: var(--bg-subtle);
+    border-radius: var(--radius);
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.feature h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.feature p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Content Section */
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.content-section p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    font-size: 1.0625rem;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .hero {
+        padding: 2rem 0 3rem;
+    }
+    
+    .category-grid,
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-section {
+        padding: 2rem 1rem;
+    }
+}
+</style>
