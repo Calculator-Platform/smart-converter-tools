@@ -1,0 +1,29 @@
+# Site Settings
+title: Smart Converter Tools
+description: Free online calculators and converters for salary, currency, mortgage and more
+url: "https://calculator-platform.github.io"
+baseurl: "/smart-converter-tools"
+
+# Build Settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  calculators:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "calculators"
+    values:
+      layout: "calculator"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - scripts/
+  - .gitignore
