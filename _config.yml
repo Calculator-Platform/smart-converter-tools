@@ -1,16 +1,17 @@
-# Site Settings
-title: Smart Converter Tools
-description: Free online calculators and converters for salary, currency, mortgage and more
+# Impostazioni Sito
+title: Strumenti di Calcolo Gratuiti
+description: Convertitori e calcolatori professionali gratuiti. Valute, unità di misura, percentuali e molto altro.
 url: "https://calculator-platform.github.io"
 baseurl: "/smart-converter-tools"
+lang: it
 
-# Build Settings
+# Impostazioni Build
 markdown: kramdown
 permalink: /:categories/:title/
 
 # Collections
 collections:
-  calculators:
+  calcolatori:
     output: true
     permalink: /:collection/:name/
 
@@ -18,11 +19,11 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "calculators"
+      type: "calcolatori"
     values:
       layout: "calculator"
 
-# Exclude from processing
+# Esclusioni
 exclude:
   - README.md
   - scripts/
