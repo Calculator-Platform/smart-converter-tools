@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="calculator-page">
+    <h1>{{ page.title }}</h1>
+    
+    <div class="calculator-container">
+        <div class="calculator-tool">
+            {{ page.calculator_html }}
+        </div>
+        
+        <div class="calculator-content">
+            {{ content }}
+        </div>
+    </div>
+    
+    <div class="related-calculators">
+        <h3>Related Calculators</h3>
+        <ul>
+        {% for calc in site.calculators limit:5 %}
+            {% if calc.url != page.url %}
+            <li><a href="{{ calc.url | relative_url }}">{{ calc.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+</article>
+
+<script>
+    // Calculator functionality will be injected here
+    {{ page.calculator_js }}
+</script>
