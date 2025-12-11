@@ -4,9 +4,6 @@ title: "Convertitore Centimetri Pollici | cm ↔ inch Online"
 description: "Converti centimetri in pollici e pollici in cm gratis. Calcolatore preciso per abbigliamento, TV, monitor e misure generiche. Conversione istantanea."
 category: "convertitori-unita"
 subcategory: "lunghezza"
-related:
-  - convertitore-metri-piedi
-  - convertitore-chilometri-miglia
 ---
 
 <div class="calculator-container">
@@ -134,13 +131,10 @@ Il pollice è definito esattamente come 2.54 centimetri dal 1959, quando fu stab
 
 Potrebbero interessarti anche questi strumenti di conversione:
 
-- [Convertitore Metri Piedi](/calcolatori/convertitore-metri-piedi/) - per misure più grandi
-- [Convertitore Chilometri Miglia](/calcolatori/convertitore-chilometri-miglia/) - per distanze
-
-Altri convertitori disponibili:
-
-- [Convertitore Chilogrammi Libbre](/calcolatori/convertitore-chilogrammi-libbre/) - per convertire pesi
-- [Convertitore Grammi Once](/calcolatori/convertitore-grammi-once/) - per ricette e cucina
+- [Convertitore Metri Piedi](/smart-converter-tools/calcolatori/convertitore-metri-piedi/) - per misure più grandi
+- [Convertitore Chilometri Miglia](/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/) - per distanze
+- [Convertitore Chilogrammi Libbre](/smart-converter-tools/calcolatori/convertitore-chilogrammi-libbre/) - per convertire pesi
+- [Convertitore Grammi Once](/smart-converter-tools/calcolatori/convertitore-grammi-once/) - per ricette e cucina
 
 <style>
 .converter-tabs {

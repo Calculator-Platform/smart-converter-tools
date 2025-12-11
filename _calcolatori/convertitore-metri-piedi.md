@@ -4,9 +4,6 @@ title: "Convertitore Metri Piedi | m ↔ ft Online Gratis"
 description: "Converti metri in piedi e pollici istantaneamente. Include conversione piedi-pollici separati. Calcolatore gratuito e preciso per edilizia e misure."
 category: "convertitori-unita"
 subcategory: "lunghezza"
-related:
-  - convertitore-chilometri-miglia
-  - convertitore-centimetri-pollici
 ---
 
 <div class="calculator-container">
@@ -130,15 +127,12 @@ Il piede internazionale è definito esattamente come 0.3048 metri dal 1959. Ques
 
 ## Convertitori correlati
 
-Potrebbero interessarti anche questi strumenti di conversione lunghezza:
+Potrebbero interessarti anche questi strumenti di conversione:
 
-- [Convertitore Chilometri Miglia](/calcolatori/convertitore-chilometri-miglia/) - per distanze lunghe
-- [Convertitore Centimetri Pollici](/calcolatori/convertitore-centimetri-pollici/) - per misure più piccole
-
-Altri convertitori disponibili:
-
-- [Convertitore Chilogrammi Libbre](/calcolatori/convertitore-chilogrammi-libbre/) - per convertire pesi
-- [Convertitore Grammi Once](/calcolatori/convertitore-grammi-once/) - per ricette e cucina
+- [Convertitore Chilometri Miglia](/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/) - per distanze lunghe
+- [Convertitore Centimetri Pollici](/smart-converter-tools/calcolatori/convertitore-centimetri-pollici/) - per misure più piccole
+- [Convertitore Chilogrammi Libbre](/smart-converter-tools/calcolatori/convertitore-chilogrammi-libbre/) - per convertire pesi
+- [Convertitore Grammi Once](/smart-converter-tools/calcolatori/convertitore-grammi-once/) - per ricette e cucina
 
 <style>
 .converter-tabs {

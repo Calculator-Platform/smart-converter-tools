@@ -4,9 +4,6 @@ title: "Convertitore Chilometri Miglia | km ↔ mi Online Gratis"
 description: "Converti chilometri in miglia e miglia in km istantaneamente. Calcolatore gratuito con tabella di conversione rapida. Semplice e preciso."
 category: "convertitori-unita"
 subcategory: "lunghezza"
-related:
-  - convertitore-metri-piedi
-  - convertitore-centimetri-pollici
 ---
 
 <div class="calculator-container">
@@ -123,15 +120,12 @@ Queste formule derivano dal fatto che un miglio internazionale è definito esatt
 
 ## Convertitori correlati
 
-Potrebbero interessarti anche questi strumenti di conversione lunghezza:
+Potrebbero interessarti anche questi strumenti di conversione:
 
-- [Convertitore Metri Piedi](/calcolatori/convertitore-metri-piedi/) - converti metri in piedi e pollici
-- [Convertitore Centimetri Pollici](/calcolatori/convertitore-centimetri-pollici/) - converti cm in pollici
-
-Altri convertitori disponibili:
-
-- [Convertitore Chilogrammi Libbre](/calcolatori/convertitore-chilogrammi-libbre/) - per convertire pesi
-- [Convertitore Grammi Once](/calcolatori/convertitore-grammi-once/) - per ricette e cucina
+- [Convertitore Metri Piedi](/smart-converter-tools/calcolatori/convertitore-metri-piedi/) - converti metri in piedi e pollici
+- [Convertitore Centimetri Pollici](/smart-converter-tools/calcolatori/convertitore-centimetri-pollici/) - converti cm in pollici
+- [Convertitore Chilogrammi Libbre](/smart-converter-tools/calcolatori/convertitore-chilogrammi-libbre/) - per convertire pesi
+- [Convertitore Grammi Once](/smart-converter-tools/calcolatori/convertitore-grammi-once/) - per ricette e cucina
 
 <style>
 .converter-tabs {

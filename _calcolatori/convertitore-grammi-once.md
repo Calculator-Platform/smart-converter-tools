@@ -4,8 +4,6 @@ title: "Convertitore Grammi Once | g ↔ oz Online Gratis"
 description: "Converti grammi in once e once in grammi facilmente. Perfetto per ricette, cucina e pesate precise. Calcolatore gratuito con conversione istantanea."
 category: "convertitori-unita"
 subcategory: "peso"
-related:
-  - convertitore-chilogrammi-libbre
 ---
 
 <div class="calculator-container">
@@ -138,13 +136,10 @@ L'oncia avoirdupois, utilizzata per pesi generali e in cucina, è definita come 
 
 Potrebbero interessarti anche questi strumenti:
 
-- [Convertitore Chilogrammi Libbre](/calcolatori/convertitore-chilogrammi-libbre/) - per pesi più grandi
-
-Altri convertitori utili:
-
-- [Convertitore Chilometri Miglia](/calcolatori/convertitore-chilometri-miglia/) - per distanze
-- [Convertitore Metri Piedi](/calcolatori/convertitore-metri-piedi/) - per lunghezze
-- [Convertitore Centimetri Pollici](/calcolatori/convertitore-centimetri-pollici/) - per misure piccole
+- [Convertitore Chilogrammi Libbre](/smart-converter-tools/calcolatori/convertitore-chilogrammi-libbre/) - per pesi più grandi
+- [Convertitore Chilometri Miglia](/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/) - per distanze
+- [Convertitore Metri Piedi](/smart-converter-tools/calcolatori/convertitore-metri-piedi/) - per lunghezze
+- [Convertitore Centimetri Pollici](/smart-converter-tools/calcolatori/convertitore-centimetri-pollici/) - per misure piccole
 
 <style>
 .converter-tabs {

@@ -4,8 +4,6 @@ title: "Convertitore Chilogrammi Libbre | kg ↔ lb Online"
 description: "Converti chilogrammi in libbre e libbre in kg gratis. Calcolatore preciso per peso corporeo, bagagli, ricette e molto altro. Conversione istantanea."
 category: "convertitori-unita"
 subcategory: "peso"
-related:
-  - convertitore-grammi-once
 ---
 
 <div class="calculator-container">
@@ -137,13 +135,10 @@ La libbra internazionale è definita esattamente come 0.45359237 chilogrammi dal
 
 Potrebbero interessarti anche questi strumenti:
 
-- [Convertitore Grammi Once](/calcolatori/convertitore-grammi-once/) - per ricette e cucina
-
-Altri convertitori utili:
-
-- [Convertitore Chilometri Miglia](/calcolatori/convertitore-chilometri-miglia/) - per distanze
-- [Convertitore Metri Piedi](/calcolatori/convertitore-metri-piedi/) - per lunghezze
-- [Convertitore Centimetri Pollici](/calcolatori/convertitore-centimetri-pollici/) - per misure piccole
+- [Convertitore Grammi Once](/smart-converter-tools/calcolatori/convertitore-grammi-once/) - per ricette e cucina
+- [Convertitore Chilometri Miglia](/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/) - per distanze
+- [Convertitore Metri Piedi](/smart-converter-tools/calcolatori/convertitore-metri-piedi/) - per lunghezze
+- [Convertitore Centimetri Pollici](/smart-converter-tools/calcolatori/convertitore-centimetri-pollici/) - per misure piccole
 
 <style>
 .converter-tabs {
