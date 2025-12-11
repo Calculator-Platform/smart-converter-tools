@@ -1,138 +1,54 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <!-- SEO Meta Tags -->
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="{{ site.author }}">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary">
-  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
-  <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  
-  <!-- Favicon (PLACEHOLDER - sostituire con favicon reale) -->
-  <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  
-  <!-- Google Analytics 4 - PLACEHOLDER -->
-  <!-- ISTRUZIONI: Sostituisci G-XXXXXXXXXX con il tuo Measurement ID reale da Google Analytics -->
-  <!-- Per ottenere il Measurement ID:
-       1. Vai su https://analytics.google.com/
-       2. Crea una proprietà GA4
-       3. Copia il Measurement ID (formato: G-XXXXXXXXXX)
-       4. Sostituisci nel codice sotto
-  -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
-  
-  <!-- Cookie Consent Banner - DA IMPLEMENTARE -->
-  <!-- Consigliato: usare soluzioni come Cookiebot, iubenda o OneTrust per banner GDPR-compliant -->
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-content">
-        <h1 class="site-title">
-          <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-        </h1>
-        <nav class="main-nav">
-          <a href="{{ site.baseurl }}/">Home</a>
-          <a href="{{ site.baseurl }}/convertitori-valuta/">Valute</a>
-          <a href="{{ site.baseurl }}/convertitori-unita/">Unità</a>
-          <a href="{{ site.baseurl }}/calcolatori-percentuale/">Percentuali</a>
-          <a href="{{ site.baseurl }}/formule-matematiche/">Matematica</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <div class="container">
-      {{ content }}
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Smart Converter Tools</h3>
-          <p>Strumenti di calcolo e conversione online gratuiti. Precisione, velocità e facilità d'uso.</p>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">
+                    <a href="{{ '/' | relative_url }}">Smart Converter Tools</a>
+                </h1>
+                <nav class="main-nav">
+                    <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+                </nav>
+            </div>
         </div>
-        
-        <div class="footer-section">
-          <h3>Categorie</h3>
-          <ul>
-            <li><a href="{{ site.baseurl }}/convertitori-valuta/">Convertitori Valuta</a></li>
-            <li><a href="{{ site.baseurl }}/convertitori-unita/">Convertitori Unità</a></li>
-            <li><a href="{{ site.baseurl }}/calcolatori-percentuale/">Calcolatori Percentuale</a></li>
-            <li><a href="{{ site.baseurl }}/formule-matematiche/">Formule Matematiche</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Informazioni</h3>
-          <ul>
-            <li><a href="{{ site.baseurl }}/privacy.html">Privacy Policy</a></li>
-            <li><a href="{{ site.baseurl }}/cookie.html">Cookie Policy</a></li>
-            <li><img src="{{ site.baseurl }}/email-contact.svg" alt="Email contatto" style="height: 20px; vertical-align: middle;"></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2024-2025 Smart Converter Tools. Tutti i diritti riservati.</p>
-        <p class="footer-disclaimer">
-          I risultati dei calcolatori sono forniti a scopo informativo. 
-          Verifica sempre i calcoli importanti con fonti ufficiali.
-        </p>
-      </div>
-    </div>
-  </footer>
+    </header>
 
-  <!-- Google AdSense Auto Ads - PLACEHOLDER -->
-  <!-- ISTRUZIONI: Sostituisci ca-pub-XXXXXXXXXXXXXXXX con il tuo Publisher ID AdSense -->
-  <!-- Per ottenere il Publisher ID:
-       1. Registrati su https://www.google.com/adsense/
-       2. Attendi approvazione (7-14 giorni)
-       3. Ottieni il codice AdSense con il tuo Publisher ID
-       4. Decommentare e sostituire nel codice sotto
-  -->
-  <!--
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-       crossorigin="anonymous"></script>
-  -->
+    <main class="container">
+        {{ content }}
+    </main>
 
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Smart Converter Tools</h3>
+                    <p>Strumenti di calcolo e conversione online gratuiti. Precisione, velocità e facilità d'uso.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Informazioni</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{ '/privacy.html' | relative_url }}">Privacy Policy</a></li>
+                        <li><a href="{{ '/cookie.html' | relative_url }}">Cookie Policy</a></li>
+                        <li><img src="{{ '/email-contact.svg' | relative_url }}" alt="Email contatto" style="height: 20px; vertical-align: middle;"></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024-2025 Smart Converter Tools. Tutti i diritti riservati.</p>
+                <p class="disclaimer">I risultati dei calcolatori sono forniti a scopo informativo. Verifica sempre i calcoli importanti con fonti ufficiali.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
