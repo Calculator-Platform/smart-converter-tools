@@ -1,9 +1,13 @@
+# Robots.txt per Smart Converter Tools
+# https://calculator-platform.github.io/smart-converter-tools/
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://calculator-platform.github.io/smart-converter-tools/sitemap.xml
-
-# Disallow admin/draft folders (se presenti in futuro)
+# Blocca cartelle di bozze e amministrazione
 Disallow: /admin/
 Disallow: /drafts/
+Disallow: /_bozze/
+
+# Sitemap
+Sitemap: https://calculator-platform.github.io/smart-converter-tools/sitemap.xml
