@@ -1,19 +1,36 @@
-# Impostazioni Sito
-title: Strumenti di Calcolo Gratuiti
-description: Convertitori e calcolatori professionali gratuiti. Valute, unità di misura, percentuali e molto altro.
+# Configurazione Jekyll per Smart Converter Tools
+# Ultimo aggiornamento: Dicembre 2024
+
+# Informazioni Sito
+title: "Smart Converter Tools"
+description: "Convertitori e calcolatori online gratuiti - Valute, unità di misura, percentuali, formule matematiche e molto altro"
 url: "https://calculator-platform.github.io"
 baseurl: "/smart-converter-tools"
-lang: it
+lang: "it"
 
-# Impostazioni Build
+# SEO Settings
+author: "Smart Converter Tools"
+locale: "it_IT"
+
+# Email contatto: vedi email-contact.svg (immagine anti-scraping)
+
+# Social (opzionale - compilare in futuro se necessario)
+# twitter_username: smartconvertertools
+# github_username: calculator-platform
+
+# Build Settings
 markdown: kramdown
-permalink: /:categories/:title/
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Collections
 collections:
   calcolatori:
     output: true
-    permalink: /:collection/:name/
+    permalink: /calcolatori/:name/
 
 # Defaults
 defaults:
@@ -22,9 +39,52 @@ defaults:
       type: "calcolatori"
     values:
       layout: "calculator"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
-# Esclusioni
+# Sitemap Settings
+sitemap:
+  exclude:
+    - "/admin/"
+    - "/drafts/"
+
+# Exclude from build
 exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - README.md
-  - scripts/
+  - LICENSE
   - .gitignore
+  - .git/
+  - drafts/
+
+# Include files
+include:
+  - _pages
+
+# Timezone
+timezone: Europe/Rome
+
+# Encoding
+encoding: utf-8
+
+# Pagination (se servirà in futuro)
+# paginate: 20
+# paginate_path: "/page:num/"
+
+# Performance
+sass:
+  style: compressed
+
+# Google Analytics (PLACEHOLDER - sostituire con ID reale)
+# google_analytics: G-XXXXXXXXXX
+
+# Google AdSense (PLACEHOLDER - sostituire con Publisher ID reale)
+# google_adsense: ca-pub-XXXXXXXXXXXXXXXX
