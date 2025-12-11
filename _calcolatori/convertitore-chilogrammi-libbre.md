@@ -1,141 +1,172 @@
 ---
 layout: calculator
 title: "Convertitore Chilogrammi Libbre | kg ↔ lb Online"
-description: "Converti chilogrammi in libbre e libbre in kg. Calcolatore preciso per peso corporeo, bagagli, pesi palestra e spedizioni."
+description: "Converti chilogrammi in libbre e libbre in kg gratis. Calcolatore preciso per peso corporeo, bagagli, ricette e molto altro. Conversione istantanea."
 category: "convertitori-unita"
 subcategory: "peso"
 related:
   - convertitore-grammi-once
-  - convertitore-metri-piedi
-  - convertitore-chilometri-miglia
-  - calcolo-percentuale
-cross_category:
-  - calcolo-sconto
-  - calcolo-area-rettangolo
 ---
 
 <div class="calculator-container">
   <h2>Convertitore Chilogrammi Libbre</h2>
   
   <div class="converter-tabs">
-    <button class="tab-btn active" onclick="switchTab('kg-to-lb')">kg → lb</button>
-    <button class="tab-btn" onclick="switchTab('lb-to-kg')">lb → kg</button>
+    <button class="tab-btn active" onclick="switchTab('kg-to-lb')">Chilogrammi → Libbre</button>
+    <button class="tab-btn" onclick="switchTab('lb-to-kg')">Libbre → Chilogrammi</button>
   </div>
   
   <div id="kg-to-lb" class="converter-panel active">
     <div class="input-group">
-      <label for="kg">Chilogrammi (kg)</label>
-      <input type="number" id="kg" placeholder="Inserisci kg" value="70" step="0.1">
+      <label for="kg-input">Chilogrammi (kg)</label>
+      <input type="number" id="kg-input" placeholder="Inserisci chilogrammi" step="0.01" min="0">
     </div>
     
-    <button class="btn-calculate" onclick="convertKgToLb()">Converti kg → lb</button>
+    <button class="calculate-btn" onclick="convertKgToLb()">Converti in Libbre</button>
     
-    <div id="result-kg-lb" class="result" style="display:none;">
-      <h3>Risultato:</h3>
-      <p id="resultText-kg-lb"></p>
-    </div>
+    <div id="kg-result" class="result-box"></div>
   </div>
   
   <div id="lb-to-kg" class="converter-panel">
     <div class="input-group">
-      <label for="lb">Libbre (lb)</label>
-      <input type="number" id="lb" placeholder="Inserisci libbre" value="150" step="0.1">
+      <label for="lb-input">Libbre (lb)</label>
+      <input type="number" id="lb-input" placeholder="Inserisci libbre" step="0.01" min="0">
     </div>
     
-    <button class="btn-calculate" onclick="convertLbToKg()">Converti lb → kg</button>
+    <button class="calculate-btn" onclick="convertLbToKg()">Converti in Chilogrammi</button>
     
-    <div id="result-lb-kg" class="result" style="display:none;">
-      <h3>Risultato:</h3>
-      <p id="resultText-lb-kg"></p>
-    </div>
+    <div id="lb-result" class="result-box"></div>
   </div>
 </div>
 
 <script>
 function switchTab(direction) {
-  const tabs = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.converter-panel');
-  
-  tabs.forEach(tab => tab.classList.remove('active'));
-  panels.forEach(panel => panel.classList.remove('active'));
+  const kgPanel = document.getElementById('kg-to-lb');
+  const lbPanel = document.getElementById('lb-to-kg');
+  const buttons = document.querySelectorAll('.tab-btn');
   
   if (direction === 'kg-to-lb') {
-    tabs[0].classList.add('active');
-    document.getElementById('kg-to-lb').classList.add('active');
+    kgPanel.classList.add('active');
+    lbPanel.classList.remove('active');
+    buttons[0].classList.add('active');
+    buttons[1].classList.remove('active');
   } else {
-    tabs[1].classList.add('active');
-    document.getElementById('lb-to-kg').classList.add('active');
+    lbPanel.classList.add('active');
+    kgPanel.classList.remove('active');
+    buttons[1].classList.add('active');
+    buttons[0].classList.remove('active');
   }
 }
 
 function convertKgToLb() {
-  const kg = parseFloat(document.getElementById('kg').value);
+  const kg = parseFloat(document.getElementById('kg-input').value);
+  const resultDiv = document.getElementById('kg-result');
   
   if (isNaN(kg) || kg < 0) {
-    alert('Inserisci un valore valido');
+    resultDiv.innerHTML = '<p class="error">Inserisci un valore valido (numero positivo)</p>';
     return;
   }
   
-  // 1 kg = 2.20462 libbre
-  const lb = (kg * 2.20462).toFixed(2);
-  
-  document.getElementById('resultText-kg-lb').innerHTML = 
-    `<strong>${kg.toFixed(1)} kg</strong> = <strong>${lb} lb</strong><br>` +
-    `<small>Fattore di conversione: 1 kg = 2.20462 libbre</small>`;
-  
-  document.getElementById('result-kg-lb').style.display = 'block';
+  const pounds = kg * 2.20462;
+  resultDiv.innerHTML = `<p class="result-value">${kg.toFixed(2)} kg = <strong>${pounds.toFixed(2)} libbre</strong></p>`;
 }
 
 function convertLbToKg() {
-  const lb = parseFloat(document.getElementById('lb').value);
+  const pounds = parseFloat(document.getElementById('lb-input').value);
+  const resultDiv = document.getElementById('lb-result');
   
-  if (isNaN(lb) || lb < 0) {
-    alert('Inserisci un valore valido');
+  if (isNaN(pounds) || pounds < 0) {
+    resultDiv.innerHTML = '<p class="error">Inserisci un valore valido (numero positivo)</p>';
     return;
   }
   
-  // 1 libbra = 0.453592 kg
-  const kg = (lb * 0.453592).toFixed(2);
-  
-  document.getElementById('resultText-lb-kg').innerHTML = 
-    `<strong>${lb.toFixed(1)} lb</strong> = <strong>${kg} kg</strong><br>` +
-    `<small>Fattore di conversione: 1 libbra = 0.453592 kg</small>`;
-  
-  document.getElementById('result-lb-kg').style.display = 'block';
+  const kg = pounds * 0.453592;
+  resultDiv.innerHTML = `<p class="result-value">${pounds.toFixed(2)} lb = <strong>${kg.toFixed(2)} chilogrammi</strong></p>`;
 }
 
-window.onload = function() {
+// Calcolo automatico al caricamento
+window.addEventListener('load', function() {
+  document.getElementById('kg-input').value = '70';
   convertKgToLb();
-};
+});
 </script>
+
+## Come usare il convertitore chilogrammi libbre
+
+Questo convertitore permette di trasformare rapidamente pesi da chilogrammi a libbre e viceversa. Usa le tab in alto per scegliere la direzione di conversione, inserisci il valore numerico nella casella corrispondente e clicca il pulsante di conversione. Il risultato viene calcolato istantaneamente con precisione al centesimo.
+
+### Quando serve convertire kg in libbre
+
+La conversione tra chilogrammi e libbre è necessaria in moltissime situazioni pratiche. Quando si viaggia verso paesi che utilizzano il sistema imperiale, come Stati Uniti o Regno Unito, i limiti di peso per i bagagli sono spesso espressi in libbre. Convertire il peso del proprio bagaglio da chilogrammi a libbre aiuta a verificare di rientrare nei limiti consentiti dalle compagnie aeree.
+
+Nel mondo del fitness e dello sport, molti programmi di allenamento internazionali utilizzano libbre per indicare i pesi da sollevare o il peso corporeo target. Chi pratica bodybuilding, powerlifting o segue diete americane deve frequentemente convertire tra questi due sistemi. Anche per ricette di cucina internazionali, specialmente quelle americane, gli ingredienti sono spesso indicati in libbre.
+
+In ambito commerciale, quando si acquistano prodotti da fornitori esteri o si spediscono pacchi all'estero, conoscere il peso in libbre oltre che in chilogrammi è fondamentale per calcolare correttamente i costi di spedizione e rispettare le normative doganali.
+
+### Formula di conversione
+
+**Da chilogrammi a libbre:** 1 kg = 2.20462 libbre
+**Da libbre a chilogrammi:** 1 libbra = 0.453592 kg
+
+La libbra internazionale è definita esattamente come 0.45359237 chilogrammi dal 1959. Questa definizione standardizzata garantisce che le conversioni siano sempre precise e riconosciute universalmente. Il fattore di conversione deriva dal rapporto tra le due unità di misura.
+
+### Tabella conversione rapida kg - libbre
+
+| Chilogrammi | Libbre | | Libbre | Chilogrammi |
+|-------------|--------|---|--------|-------------|
+| 1 kg | 2.20 lb | | 1 lb | 0.45 kg |
+| 5 kg | 11.02 lb | | 5 lb | 2.27 kg |
+| 10 kg | 22.05 lb | | 10 lb | 4.54 kg |
+| 20 kg | 44.09 lb | | 20 lb | 9.07 kg |
+| 50 kg | 110.23 lb | | 50 lb | 22.68 kg |
+| 70 kg | 154.32 lb | | 100 lb | 45.36 kg |
+| 100 kg | 220.46 lb | | 150 lb | 68.04 kg |
+
+### Pesi corporei comuni
+
+| Chilogrammi | Libbre | Categoria |
+|-------------|--------|-----------|
+| 50 kg | 110 lb | Peso leggero |
+| 60 kg | 132 lb | Peso medio-leggero |
+| 70 kg | 154 lb | Peso medio |
+| 80 kg | 176 lb | Peso medio-pesante |
+| 90 kg | 198 lb | Peso pesante |
+| 100 kg | 220 lb | Peso molto pesante |
+
+## Convertitori correlati
+
+Potrebbero interessarti anche questi strumenti:
+
+- [Convertitore Grammi Once](/calcolatori/convertitore-grammi-once/) - per ricette e cucina
+
+Altri convertitori utili:
+
+- [Convertitore Chilometri Miglia](/calcolatori/convertitore-chilometri-miglia/) - per distanze
+- [Convertitore Metri Piedi](/calcolatori/convertitore-metri-piedi/) - per lunghezze
+- [Convertitore Centimetri Pollici](/calcolatori/convertitore-centimetri-pollici/) - per misure piccole
 
 <style>
 .converter-tabs {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .tab-btn {
   flex: 1;
-  padding: 12px;
-  background: #f0f0f0;
+  padding: 0.75rem;
   border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  background: white;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.tab-btn:hover {
-  background: #e8e8e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s;
 }
 
 .tab-btn.active {
-  background: #0066FF;
+  background: #667eea;
   color: white;
-  border-color: #0066FF;
+  border-color: #667eea;
 }
 
 .converter-panel {
@@ -146,77 +177,3 @@ window.onload = function() {
   display: block;
 }
 </style>
-
-## Come Usare il Convertitore Chilogrammi Libbre
-
-Il **convertitore chilogrammi libbre** è lo strumento essenziale per trasformare misure di peso e massa tra il sistema metrico (chilogrammi) e il sistema imperiale (libbre). Ideale per fitness, viaggi, cucina e commercio internazionale.
-
-### Caratteristiche Principali
-
-- **Doppia conversione**: da kg a libbre e viceversa
-- **Precisione professionale**: calcoli accurati per ogni esigenza
-- **Interfaccia immediata**: risultati istantanei
-- **Formato mobile-friendly**: funziona su tutti i dispositivi
-- **Calcolo automatico**: aggiornamento in tempo reale
-
-### Formula di Conversione kg-lb
-
-La conversione tra chilogrammi e libbre segue questi rapporti matematici:
-
-- **1 chilogrammo = 2,20462 libbre**
-- **1 libbra = 0,453592 chilogrammi**
-
-La libbra (pound, simbolo lb) è l'unità di massa principale del sistema imperiale, usata principalmente negli USA e in alcuni paesi anglofoni.
-
-### Quando Serve Convertire Chilogrammi in Libbre
-
-**Peso corporeo e fitness**: Negli Stati Uniti il peso si misura in libbre. Se pesi 70 kg, corrispondi a circa 154 libbre. App fitness, bilance e programmi di allenamento americani usano esclusivamente libbre.
-
-**Bagagli aerei**: Le compagnie aeree americane indicano i limiti bagaglio in libbre. Un limite di 50 libbre equivale a 22,7 kg. Superare il limite può costare caro, quindi è essenziale convertire prima di partire.
-
-**Sollevamento pesi e palestra**: I pesi olimpici americani sono in libbre (45 lb, 35 lb, 25 lb). I record mondiali vengono comunicati in entrambe le unità. Un bilanciere olimpico pesa 45 lb (20,4 kg).
-
-**Spedizioni internazionali**: I corrieri esprimono tariffe in base al peso in kg o lb. Convertire correttamente evita sorprese sul costo finale.
-
-**Neonati e pediatria**: Negli USA il peso dei bambini si misura in libbre e once. Un neonato di 3,5 kg pesa circa 7 lb 11 oz.
-
-### Conversioni Comuni kg-lb
-
-| Chilogrammi | Libbre | Contesto |
-|-------------|--------|----------|
-| 1 kg | 2,2 lb | Piccolo oggetto |
-| 5 kg | 11 lb | Manubrio leggero |
-| 10 kg | 22 lb | Bagaglio a mano |
-| 20 kg | 44 lb | Valigia standard |
-| 50 kg | 110 lb | Persona snella |
-| 70 kg | 154 lb | Peso medio uomo |
-| 100 kg | 220 lb | Atleta pesante |
-
-### Differenza tra Libbra e Oncia
-
-Nel sistema imperiale, per pesi piccoli si usano le once:
-- **1 libbra = 16 once (oz)**
-- **1 oncia = 28,35 grammi**
-
-Il peso si esprime spesso come "libbre e once", ad esempio 7 lb 8 oz (sette libbre e otto once). Questo formato è comune per pesare neonati, alimenti e piccoli oggetti.
-
-### Storia della Libbra
-
-Il termine "libbra" deriva dal latino "libra pondo" (bilancia-peso), da cui anche il simbolo "lb". In epoca romana, la libra equivaleva a circa 327 grammi. La libbra moderna inglese fu standardizzata nel 1878 e corrisponde esattamente a 0,45359237 kg per definizione internazionale.
-
-### Peso vs Massa: Chiarimento Scientifico
-
-Tecnicamente, chilogrammi misurano la **massa** mentre le libbre possono misurare sia massa che peso (forza). Nel linguaggio comune si usano intercambiabilmente, ma:
-
-- **Massa (kg)**: quantità di materia, costante ovunque
-- **Peso (N o lb-force)**: forza gravitazionale, varia con gravità
-
-Sulla Luna, la tua massa resta 70 kg ma il peso scende a circa 25 lb perché la gravità è minore. Nel nostro convertitore trattiamo libbre come unità di massa terrestre.
-
-## Strumenti Correlati
-
-Potrebbe interessarti anche:
-- [Convertitore Grammi Once](/calcolatori/convertitore-grammi-once/) - per pesi piccoli
-- [Convertitore Metri Piedi](/calcolatori/convertitore-metri-piedi/) - per altezze
-- [Calcolo Percentuale](/calcolatori/calcolo-percentuale/) - calcola variazioni peso
-- [Calcolo Sconto](/calcolatori/calcolo-sconto/) - per sconti su prodotti

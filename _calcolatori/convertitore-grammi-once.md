@@ -1,139 +1,173 @@
 ---
 layout: calculator
-title: "Convertitore Grammi Once | g ↔ oz Online"
-description: "Converti grammi in once e once in grammi. Calcolatore preciso per cucina, ricette americane, gioielli e pesi piccoli."
+title: "Convertitore Grammi Once | g ↔ oz Online Gratis"
+description: "Converti grammi in once e once in grammi facilmente. Perfetto per ricette, cucina e pesate precise. Calcolatore gratuito con conversione istantanea."
 category: "convertitori-unita"
 subcategory: "peso"
 related:
   - convertitore-chilogrammi-libbre
-  - convertitore-litri-galloni
-  - calcolo-percentuale
-cross_category:
-  - calcolo-sconto
 ---
 
 <div class="calculator-container">
   <h2>Convertitore Grammi Once</h2>
   
   <div class="converter-tabs">
-    <button class="tab-btn active" onclick="switchTab('g-to-oz')">g → oz</button>
-    <button class="tab-btn" onclick="switchTab('oz-to-g')">oz → g</button>
+    <button class="tab-btn active" onclick="switchTab('g-to-oz')">Grammi → Once</button>
+    <button class="tab-btn" onclick="switchTab('oz-to-g')">Once → Grammi</button>
   </div>
   
   <div id="g-to-oz" class="converter-panel active">
     <div class="input-group">
-      <label for="grammi">Grammi (g)</label>
-      <input type="number" id="grammi" placeholder="Inserisci grammi" value="100" step="1">
+      <label for="g-input">Grammi (g)</label>
+      <input type="number" id="g-input" placeholder="Inserisci grammi" step="0.1" min="0">
     </div>
     
-    <button class="btn-calculate" onclick="convertGToOz()">Converti g → oz</button>
+    <button class="calculate-btn" onclick="convertGToOz()">Converti in Once</button>
     
-    <div id="result-g-oz" class="result" style="display:none;">
-      <h3>Risultato:</h3>
-      <p id="resultText-g-oz"></p>
-    </div>
+    <div id="g-result" class="result-box"></div>
   </div>
   
   <div id="oz-to-g" class="converter-panel">
     <div class="input-group">
-      <label for="once">Once (oz)</label>
-      <input type="number" id="once" placeholder="Inserisci once" value="4" step="0.1">
+      <label for="oz-input">Once (oz)</label>
+      <input type="number" id="oz-input" placeholder="Inserisci once" step="0.1" min="0">
     </div>
     
-    <button class="btn-calculate" onclick="convertOzToG()">Converti oz → g</button>
+    <button class="calculate-btn" onclick="convertOzToG()">Converti in Grammi</button>
     
-    <div id="result-oz-g" class="result" style="display:none;">
-      <h3>Risultato:</h3>
-      <p id="resultText-oz-g"></p>
-    </div>
+    <div id="oz-result" class="result-box"></div>
   </div>
 </div>
 
 <script>
 function switchTab(direction) {
-  const tabs = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.converter-panel');
-  
-  tabs.forEach(tab => tab.classList.remove('active'));
-  panels.forEach(panel => panel.classList.remove('active'));
+  const gPanel = document.getElementById('g-to-oz');
+  const ozPanel = document.getElementById('oz-to-g');
+  const buttons = document.querySelectorAll('.tab-btn');
   
   if (direction === 'g-to-oz') {
-    tabs[0].classList.add('active');
-    document.getElementById('g-to-oz').classList.add('active');
+    gPanel.classList.add('active');
+    ozPanel.classList.remove('active');
+    buttons[0].classList.add('active');
+    buttons[1].classList.remove('active');
   } else {
-    tabs[1].classList.add('active');
-    document.getElementById('oz-to-g').classList.add('active');
+    ozPanel.classList.add('active');
+    gPanel.classList.remove('active');
+    buttons[1].classList.add('active');
+    buttons[0].classList.remove('active');
   }
 }
 
 function convertGToOz() {
-  const grammi = parseFloat(document.getElementById('grammi').value);
+  const grams = parseFloat(document.getElementById('g-input').value);
+  const resultDiv = document.getElementById('g-result');
   
-  if (isNaN(grammi) || grammi < 0) {
-    alert('Inserisci un valore valido');
+  if (isNaN(grams) || grams < 0) {
+    resultDiv.innerHTML = '<p class="error">Inserisci un valore valido (numero positivo)</p>';
     return;
   }
   
-  // 1 grammo = 0.035274 once
-  const once = (grammi * 0.035274).toFixed(2);
-  
-  document.getElementById('resultText-g-oz').innerHTML = 
-    `<strong>${grammi.toFixed(0)} g</strong> = <strong>${once} oz</strong><br>` +
-    `<small>Fattore di conversione: 1 g = 0.035274 once</small>`;
-  
-  document.getElementById('result-g-oz').style.display = 'block';
+  const ounces = grams * 0.035274;
+  resultDiv.innerHTML = `<p class="result-value">${grams.toFixed(1)} g = <strong>${ounces.toFixed(2)} once</strong></p>`;
 }
 
 function convertOzToG() {
-  const once = parseFloat(document.getElementById('once').value);
+  const ounces = parseFloat(document.getElementById('oz-input').value);
+  const resultDiv = document.getElementById('oz-result');
   
-  if (isNaN(once) || once < 0) {
-    alert('Inserisci un valore valido');
+  if (isNaN(ounces) || ounces < 0) {
+    resultDiv.innerHTML = '<p class="error">Inserisci un valore valido (numero positivo)</p>';
     return;
   }
   
-  // 1 oncia = 28.3495 grammi
-  const grammi = (once * 28.3495).toFixed(1);
-  
-  document.getElementById('resultText-oz-g').innerHTML = 
-    `<strong>${once.toFixed(1)} oz</strong> = <strong>${grammi} g</strong><br>` +
-    `<small>Fattore di conversione: 1 oncia = 28.3495 grammi</small>`;
-  
-  document.getElementById('result-oz-g').style.display = 'block';
+  const grams = ounces * 28.3495;
+  resultDiv.innerHTML = `<p class="result-value">${ounces.toFixed(2)} oz = <strong>${grams.toFixed(1)} grammi</strong></p>`;
 }
 
-window.onload = function() {
+// Calcolo automatico al caricamento
+window.addEventListener('load', function() {
+  document.getElementById('g-input').value = '100';
   convertGToOz();
-};
+});
 </script>
+
+## Come usare il convertitore grammi once
+
+Questo strumento di conversione è stato progettato per essere intuitivo e veloce. Seleziona la direzione di conversione utilizzando le tab in alto, digita il valore nella casella di input e premi il pulsante di conversione. Il risultato viene mostrato immediatamente con la precisione appropriata per l'uso culinario.
+
+### Quando serve convertire grammi in once
+
+La conversione tra grammi e once è fondamentale principalmente in cucina e pasticceria. Le ricette americane utilizzano sistematicamente once per indicare le quantità degli ingredienti, mentre in Europa si preferisce il sistema metrico con i grammi. Chi ama sperimentare ricette internazionali si trova spesso nella necessità di convertire queste misure per ottenere risultati precisi.
+
+Nella preparazione di dolci e prodotti da forno, la precisione è cruciale. Una piccola differenza nelle quantità di farina, zucchero o burro può compromettere la riuscita della ricetta. Convertire accuratamente le once in grammi o viceversa garantisce di seguire correttamente le proporzioni indicate dalla ricetta originale.
+
+Anche nell'ambito del fitness e della nutrizione, molte app e programmi alimentari americani indicano le porzioni in once. Chi segue una dieta specifica o monitora l'apporto proteico necessita di convertire questi valori in grammi per pesare correttamente gli alimenti sulla propria bilancia metrica.
+
+Nel settore dei metalli preziosi e della gioielleria, le once troy sono utilizzate per pesare oro, argento e pietre preziose. Anche se l'oncia troy è leggermente diversa dall'oncia standard, la conversione di base rimane simile e questo strumento fornisce un'ottima approssimazione per calcoli generali.
+
+### Formula di conversione
+
+**Da grammi a once:** 1 g = 0.035274 once
+**Da once a grammi:** 1 oncia = 28.3495 g
+
+L'oncia avoirdupois, utilizzata per pesi generali e in cucina, è definita come esattamente 28.349523125 grammi. Questa definizione standardizzata garantisce conversioni precise e universalmente riconosciute. Il fattore di conversione è fisso e non cambia.
+
+### Tabella conversione rapida grammi - once
+
+| Grammi | Once | | Once | Grammi |
+|--------|------|---|------|--------|
+| 10 g | 0.35 oz | | 1 oz | 28.35 g |
+| 25 g | 0.88 oz | | 2 oz | 56.70 g |
+| 50 g | 1.76 oz | | 4 oz | 113.40 g |
+| 100 g | 3.53 oz | | 8 oz | 226.80 g |
+| 250 g | 8.82 oz | | 16 oz | 453.59 g |
+| 500 g | 17.64 oz | | 32 oz | 907.18 g |
+
+### Ingredienti comuni in cucina
+
+| Ingrediente | Grammi | Once |
+|-------------|--------|------|
+| Farina | 125 g | 4.4 oz |
+| Zucchero | 200 g | 7.1 oz |
+| Burro | 113 g | 4 oz |
+| Cacao in polvere | 30 g | 1.1 oz |
+| Cioccolato | 170 g | 6 oz |
+| Farina di mandorle | 100 g | 3.5 oz |
+
+## Convertitori correlati
+
+Potrebbero interessarti anche questi strumenti:
+
+- [Convertitore Chilogrammi Libbre](/calcolatori/convertitore-chilogrammi-libbre/) - per pesi più grandi
+
+Altri convertitori utili:
+
+- [Convertitore Chilometri Miglia](/calcolatori/convertitore-chilometri-miglia/) - per distanze
+- [Convertitore Metri Piedi](/calcolatori/convertitore-metri-piedi/) - per lunghezze
+- [Convertitore Centimetri Pollici](/calcolatori/convertitore-centimetri-pollici/) - per misure piccole
 
 <style>
 .converter-tabs {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .tab-btn {
   flex: 1;
-  padding: 12px;
-  background: #f0f0f0;
+  padding: 0.75rem;
   border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  background: white;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.tab-btn:hover {
-  background: #e8e8e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s;
 }
 
 .tab-btn.active {
-  background: #0066FF;
+  background: #667eea;
   color: white;
-  border-color: #0066FF;
+  border-color: #667eea;
 }
 
 .converter-panel {
@@ -144,74 +178,3 @@ window.onload = function() {
   display: block;
 }
 </style>
-
-## Come Usare il Convertitore Grammi Once
-
-Il **convertitore grammi once** è perfetto per cucina, ricette americane, gioielleria e piccoli pesi. Converti facilmente tra il sistema metrico (grammi) e il sistema imperiale (once).
-
-### Funzionalità del Convertitore
-
-- **Bidirezionale**: converti da grammi a once e viceversa
-- **Precisione culinaria**: ideale per dosaggi ricette
-- **Calcolo immediato**: risultati istantanei
-- **Interfaccia pulita**: semplice e veloce
-- **Mobile-ready**: funziona su tutti i dispositivi
-
-### Formula Conversione g-oz
-
-La conversione tra grammi e once segue questi rapporti:
-
-- **1 grammo = 0,035274 once**
-- **1 oncia = 28,3495 grammi**
-
-L'oncia (ounce, simbolo oz) è usata principalmente per ingredienti, alimenti e oggetti piccoli nel sistema imperiale americano.
-
-### Quando Serve Convertire Grammi in Once
-
-**Ricette americane**: Molte ricette USA indicano ingredienti in once. Se una ricetta richiede 8 oz di farina, corrispondono a circa 227 grammi. Convertire correttamente garantisce la riuscita del piatto.
-
-**Cucina e bakery**: Le bilance americane misurano in once. Una porzione di formaggio da 2 oz equivale a circa 57 grammi. I pasticceri devono saper convertire per seguire ricette internazionali.
-
-**Gioielli e metalli preziosi**: Oro e argento si pesano in once troy (leggermente diverse). Un'oncia troy = 31,1 grammi. Per investimenti in metalli preziosi serve conoscere questa conversione.
-
-**Nutrizione e porzioni**: Le etichette alimentari americane indicano porzioni in once. Una porzione da 1 oz di noci equivale a circa 28 grammi, utile per contare calorie.
-
-**Caffè e tè**: I baristi americani dosano caffè in once. Una tazza standard da 6 oz corrisponde a circa 170 grammi di liquido.
-
-### Conversioni Comuni Grammi-Once
-
-| Grammi | Once | Uso Tipico |
-|--------|------|------------|
-| 15 g | 0,5 oz | Cucchiaio ingrediente |
-| 28 g | 1 oz | Porzione snack |
-| 100 g | 3,5 oz | Porzione carne |
-| 200 g | 7 oz | Tazza farina |
-| 250 g | 8,8 oz | Stick burro |
-| 500 g | 17,6 oz | Confezione pasta |
-
-### Oncia Troy vs Oncia Avoirdupois
-
-Esistono due tipi di once:
-
-**Oncia avoirdupois** (oz): 28,35 grammi, usata per cibo e oggetti comuni. È quella del nostro convertitore.
-
-**Oncia troy** (oz t): 31,10 grammi, usata solo per metalli preziosi. Un'oncia d'oro si riferisce sempre a once troy.
-
-La differenza è significativa: comprare oro pensando alle once comuni ti fa perdere circa il 10% del peso!
-
-### Misure Cucina USA in Once
-
-Le misure volumetriche americane (cups, tablespoon) hanno anche equivalenze in once di peso:
-
-- **1 cup farina = 4,5 oz = 128 g**
-- **1 cup zucchero = 7 oz = 200 g**
-- **1 tablespoon = 0,5 oz = 14 g**
-- **1 stick burro = 4 oz = 113 g**
-
-Attenzione: queste equivalenze peso-volume variano per ogni ingrediente. Una tazza di farina pesa meno di una tazza di zucchero.
-
-## Strumenti Correlati
-
-- [Convertitore Chilogrammi Libbre](/calcolatori/convertitore-chilogrammi-libbre/) - pesi maggiori
-- [Convertitore Litri Galloni](/calcolatori/convertitore-litri-galloni/) - liquidi
-- [Calcolo Percentuale](/calcolatori/calcolo-percentuale/) - proporzioni ricette
