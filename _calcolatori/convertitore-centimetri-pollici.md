@@ -122,39 +122,32 @@ window.addEventListener('load', function() {
 </script>
 
 <div class="content-section">
+<h2>Come usare il convertitore centimetri pollici</h2>
+<p>Questo strumento ti permette di convertire facilmente tra centimetri e pollici in entrambe le direzioni. Seleziona la direzione di conversione usando le tab in alto, inserisci il valore e premi "Converti". Il risultato viene mostrato istantaneamente con precisione di due decimali.</p>
 
-## Come usare il convertitore centimetri pollici
+<h3>Quando serve convertire centimetri in pollici</h3>
+<p>La conversione tra centimetri e pollici è essenziale per misure di schermi TV e monitor, dove le dimensioni sono sempre espresse in pollici. Anche nel settore dell'abbigliamento, molti capi importati utilizzano taglie in pollici che necessitano conversione. Per progetti di fai-da-te e bricolage con materiali provenienti da paesi che usano il sistema imperiale, questa conversione è indispensabile.</p>
 
-Questo strumento ti permette di convertire facilmente tra centimetri e pollici in entrambe le direzioni. Seleziona la direzione di conversione usando le tab in alto, inserisci il valore e premi "Converti". Il risultato viene mostrato istantaneamente con precisione di due decimali.
+<p>Chi lavora con design grafico e stampa deve spesso convertire tra centimetri e pollici per adattare i progetti a standard internazionali. Anche per l'altezza delle persone, alcuni paesi esprimono la statura in piedi e pollici anziché in centimetri.</p>
 
-### Quando serve convertire centimetri in pollici
+<h3>Formula di conversione</h3>
+<p><strong>Da centimetri a pollici:</strong> 1 cm = 0.393701 pollici<br>
+<strong>Da pollici a centimetri:</strong> 1 pollice = 2.54 cm</p>
 
-La conversione tra centimetri e pollici è essenziale per misure di schermi TV e monitor, dove le dimensioni sono sempre espresse in pollici. Anche nel settore dell'abbigliamento, molti capi importati utilizzano taglie in pollici che necessitano conversione. Per progetti di fai-da-te e bricolage con materiali provenienti da paesi che usano il sistema imperiale, questa conversione è indispensabile.
+<p>La conversione è basata sulla definizione internazionale che stabilisce esattamente 1 pollice = 2.54 centimetri. Questa definizione è stata fissata nel 1959 ed è utilizzata in tutto il mondo per garantire uniformità nelle misurazioni.</p>
 
-Chi lavora con design grafico e stampa deve spesso convertire tra centimetri e pollici per adattare i progetti a standard internazionali. Anche per l'altezza delle persone, alcuni paesi esprimono la statura in piedi e pollici anziché in centimetri.
-
-### Formula di conversione
-
-**Da centimetri a pollici:** 1 cm = 0.393701 pollici  
-**Da pollici a centimetri:** 1 pollice = 2.54 cm
-
-La conversione è basata sulla definizione internazionale che stabilisce esattamente 1 pollice = 2.54 centimetri. Questa definizione è stata fissata nel 1959 ed è utilizzata in tutto il mondo per garantire uniformità nelle misurazioni.
-
-### Tabella conversione rapida cm - pollici
-
+<h3>Tabella conversione rapida cm - pollici</h3>
 <div class="conversion-table">
-
-| Centimetri | Pollici | | Pollici | Centimetri |
-|------------|---------|---|---------|------------|
-| 1 cm | 0.39 in | | 1 in | 2.54 cm |
-| 5 cm | 1.97 in | | 5 in | 12.70 cm |
-| 10 cm | 3.94 in | | 10 in | 25.40 cm |
-| 20 cm | 7.87 in | | 20 in | 50.80 cm |
-| 50 cm | 19.69 in | | 50 in | 127.00 cm |
-| 100 cm | 39.37 in | | 100 in | 254.00 cm |
-
+<table>
+<tr><th>Centimetri</th><th>Pollici</th><th></th><th>Pollici</th><th>Centimetri</th></tr>
+<tr><td>1 cm</td><td>0.39 in</td><td></td><td>1 in</td><td>2.54 cm</td></tr>
+<tr><td>5 cm</td><td>1.97 in</td><td></td><td>5 in</td><td>12.70 cm</td></tr>
+<tr><td>10 cm</td><td>3.94 in</td><td></td><td>10 in</td><td>25.40 cm</td></tr>
+<tr><td>20 cm</td><td>7.87 in</td><td></td><td>20 in</td><td>50.80 cm</td></tr>
+<tr><td>50 cm</td><td>19.69 in</td><td></td><td>50 in</td><td>127.00 cm</td></tr>
+<tr><td>100 cm</td><td>39.37 in</td><td></td><td>100 in</td><td>254.00 cm</td></tr>
+</table>
 </div>
-
 </div>
 
 <div class="related-tools">
