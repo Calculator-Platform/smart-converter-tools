@@ -11,6 +11,13 @@ subcategory: "lunghezza"
   <p>Converti velocemente tra cm e pollici</p>
 </div>
 
+<!-- ADV SPOT 1: Banner principale above fold -->
+<div class="ad-container ad-primary">
+  <div class="ad-placeholder ad-main">
+    <span class="ad-text">Banner 728×90</span>
+  </div>
+</div>
+
 <div class="calculator-box">
   <div class="converter-tabs">
     <button class="tab-btn active" onclick="switchTab('cm-to-in')">
@@ -41,6 +48,13 @@ subcategory: "lunghezza"
       <span class="button-icon">⚡</span>Converti in Centimetri
     </button>
     <div id="in-result" class="result-box"></div>
+  </div>
+</div>
+
+<!-- ADV SPOT 2: Banner secondario dopo calculator -->
+<div class="ad-container ad-secondary">
+  <div class="ad-placeholder ad-second">
+    <span class="ad-text">Banner 728×90</span>
   </div>
 </div>
 
