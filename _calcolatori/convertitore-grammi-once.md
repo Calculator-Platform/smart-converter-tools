@@ -14,12 +14,9 @@ subcategory: "peso"
 
 <!-- ADV SPOT 1: Banner principale above fold -->
 <div class="ad-container ad-primary">
-  <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-main">
-    <span class="ad-text">Banner 336×280</span>
+    <span class="ad-text">Banner 728×90</span>
   </div>
-</div>
-
 <div class="calculator-box">
   <div class="converter-tabs">
     <button class="tab-btn active" onclick="switchTab('g-to-oz')"><span class="tab-label">Grammi → Once</span></button>
@@ -41,11 +38,9 @@ subcategory: "peso"
 
 <!-- ADV SPOT 2: Banner secondario dopo calculator -->
 <div class="ad-container ad-secondary">
-  <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-second">
     <span class="ad-text">Banner 728×90</span>
   </div>
-</div>
 
 <script>
 function switchTab(d){const k=document.getElementById('g-to-oz');const m=document.getElementById('oz-to-g');const b=document.querySelectorAll('.tab-btn');if(d==='g-to-oz'){k.classList.add('active');m.classList.remove('active');b[0].classList.add('active');b[1].classList.remove('active')}else{m.classList.add('active');k.classList.remove('active');b[1].classList.add('active');b[0].classList.remove('active')}}
