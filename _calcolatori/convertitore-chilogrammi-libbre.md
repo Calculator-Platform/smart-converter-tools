@@ -1,13 +1,10 @@
 ---
 layout: calculator
 title: "Convertitore Chilogrammi Libbre  |  kg ↔ lb  |  Online Gratis"
-description: "Converti chilogrammi in libbre e libbre in km istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
+description: "Converti chilogrammi in libbre e libbre in kg istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
 category: "convertitori-unita"
-subcategory: "lunghezza"
+subcategory: "peso"
 ---
-
-<!-- Breadcrumb discreto su sfondo bianco -->
-<div class="breadcrumb">Convertitore Chilogrammi Libbre kg ↔ lb Online Gratis</div>
 
 <div class="page-hero">
   <div class="hero-icon">⚖️</div>
@@ -15,7 +12,7 @@ subcategory: "lunghezza"
   <p>Converti velocemente tra kg e libbre</p>
 </div>
 
-<!-- ADV SPOT 1: Banner principale above fold (Desktop: 336x280, Mobile: 300x250) -->
+<!-- ADV SPOT 1: Banner principale above fold -->
 <div class="ad-container ad-primary">
   <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-main">
@@ -31,18 +28,18 @@ subcategory: "lunghezza"
   
   <div id="kg-to-lb" class="converter-panel active">
     <div class="input-wrapper"><label for="kg-input">Chilogrammi (kg)</label><input type="number" id="kg-input" placeholder="Inserisci valore" step="0.01" min="0"></div>
-    <button class="calc-button" onclick="convertKgToLb()"><span class="button-icon">⚡</span>Converti in Miglia</button>
+    <button class="calc-button" onclick="convertKgToLb()"><span class="button-icon">⚡</span>Converti in Libbre</button>
     <div id="kg-result" class="result-box"></div>
   </div>
   
   <div id="lb-to-kg" class="converter-panel">
     <div class="input-wrapper"><label for="lb-input">Libbre (lb)</label><input type="number" id="lb-input" placeholder="Inserisci valore" step="0.01" min="0"></div>
-    <button class="calc-button" onclick="convertLbToKg()"><span class="button-icon">⚡</span>Converti in chilogrammi</button>
+    <button class="calc-button" onclick="convertLbToKg()"><span class="button-icon">⚡</span>Converti in Chilogrammi</button>
     <div id="lb-result" class="result-box"></div>
   </div>
 </div>
 
-<!-- ADV SPOT 2: Banner secondario dopo calculator (Desktop: 728x90, Mobile: 300x250) -->
+<!-- ADV SPOT 2: Banner secondario dopo calculator -->
 <div class="ad-container ad-secondary">
   <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-second">
@@ -52,46 +49,51 @@ subcategory: "lunghezza"
 
 <script>
 function switchTab(d){const k=document.getElementById('kg-to-lb');const m=document.getElementById('lb-to-kg');const b=document.querySelectorAll('.tab-btn');if(d==='kg-to-lb'){k.classList.add('active');m.classList.remove('active');b[0].classList.add('active');b[1].classList.remove('active')}else{m.classList.add('active');k.classList.remove('active');b[1].classList.add('active');b[0].classList.remove('active')}}
-function convertKgToLb(){const km=parseFloat(document.getElementById('kg-input').value);const r=document.getElementById('kg-result');if(isNaN(km)||km<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const mi=km*2.20462;r.innerHTML=`<div class="result-success"><div class="result-main">${km.toFixed(2)} km = <strong>${mi.toFixed(2)} libbre</strong></div></div>`}
-function convertLbToKg(){const mi=parseFloat(document.getElementById('lb-input').value);const r=document.getElementById('lb-result');if(isNaN(mi)||mi<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const km=mi*0.453592;r.innerHTML=`<div class="result-success"><div class="result-main">${mi.toFixed(2)} mi = <strong>${km.toFixed(2)} chilogrammi</strong></div></div>`}
+function convertKgToLb(){const kg=parseFloat(document.getElementById('kg-input').value);const r=document.getElementById('kg-result');if(isNaN(kg)||kg<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const lb=kg*2.20462;r.innerHTML=`<div class="result-success"><div class="result-main">${kg.toFixed(2)} kg = <strong>${lb.toFixed(2)} libbre</strong></div></div>`}
+function convertLbToKg(){const lb=parseFloat(document.getElementById('lb-input').value);const r=document.getElementById('lb-result');if(isNaN(lb)||lb<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const kg=lb*0.453592;r.innerHTML=`<div class="result-success"><div class="result-main">${lb.toFixed(2)} lb = <strong>${kg.toFixed(2)} chilogrammi</strong></div></div>`}
 window.addEventListener('load',function(){document.getElementById('kg-input').value='10';convertKgToLb()});
 </script>
 
 <div class="content-section">
-<h2>Come usare il convertitore</h2>
-<p>Seleziona la direzione di conversione usando le tab in alto, inserisci il valore numerico che vuoi convertire e premi il pulsante "Converti". Il risultato viene mostrato istantaneamente con precisione di due decimali. Puoi convertire in entrambe le direzioni senza dover ricaricare la pagina.</p>
+<h2>Come usare il convertitore chilogrammi libbre</h2>
+<p>Questo strumento ti permette di convertire facilmente tra chilogrammi e libbre in entrambe le direzioni. Seleziona la direzione di conversione usando le tab in alto, inserisci il valore e premi "Converti". Il risultato viene mostrato istantaneamente con precisione di due decimali.</p>
 
 <h3>Quando serve convertire chilogrammi in libbre</h3>
-<p>La conversione tra chilogrammi e libbre è essenziale per peso corporeo, bagagli, ricette e spedizioni.
+<p>La conversione tra chilogrammi e libbre è fondamentale per il peso corporeo quando si consultano programmi di fitness o diete internazionali. Per i bagagli aerei, molte compagnie usano limiti in libbre per i voli negli Stati Uniti. Nelle ricette di cucina americana, gli ingredienti sono spesso indicati in libbre e once.</p>
+
+<p>Chi pratica sollevamento pesi deve convertire i pesi delle attrezzature quando segue programmi di allenamento internazionali. Anche nelle spedizioni internazionali, conoscere il peso in libbre è essenziale per calcolare correttamente i costi di trasporto verso paesi che usano il sistema imperiale.</p>
 
 <h3>Formula di conversione</h3>
-<p><strong>Da chilogrammi a libbre:</strong> 1 km = 2.20462 libbre<br><strong>Da libbre a chilogrammi:</strong> 1 miglio = 0.453592 km</p>
+<p><strong>Da chilogrammi a libbre:</strong> 1 kg = 2.20462 libbre<br>
+<strong>Da libbre a chilogrammi:</strong> 1 libbra = 0.453592 kg</p>
 
-<h3>Tabella di conversione rapida</h3>
-<p>Per riferimento veloce, ecco alcune conversioni comuni:</p>
-<ul>
-<li>1 km = 0.62 libbre</li>
-<li>5 km = 3.11 libbre</li>
-<li>10 km = 6.21 libbre</li>
-<li>50 km = 31.07 libbre</li>
-<li>100 km = 62.14 libbre</li>
-</ul>
+<p>La conversione è basata sulla definizione internazionale che stabilisce 1 libbra (pound) pari esattamente a 0.45359237 chilogrammi. Questa relazione deriva dalla standardizzazione dei pesi e misure stabilita nel 1959.</p>
+
+<h3>Tabella conversione rapida kg - libbre</h3>
+<div class="conversion-table">
+<table>
+<tr><th>Chilogrammi</th><th>Libbre</th><th></th><th>Libbre</th><th>Chilogrammi</th></tr>
+<tr><td>1 kg</td><td>2.20 lb</td><td></td><td>1 lb</td><td>0.45 kg</td></tr>
+<tr><td>5 kg</td><td>11.02 lb</td><td></td><td>5 lb</td><td>2.27 kg</td></tr>
+<tr><td>10 kg</td><td>22.05 lb</td><td></td><td>10 lb</td><td>4.54 kg</td></tr>
+<tr><td>20 kg</td><td>44.09 lb</td><td></td><td>20 lb</td><td>9.07 kg</td></tr>
+<tr><td>50 kg</td><td>110.23 lb</td><td></td><td>50 lb</td><td>22.68 kg</td></tr>
+<tr><td>100 kg</td><td>220.46 lb</td><td></td><td>100 lb</td><td>45.36 kg</td></tr>
+</table>
+</div>
 </div>
 
 <div class="related-tools">
 <h3>Convertitori correlati</h3>
 <div class="related-grid">
+<a href="/smart-converter-tools/calcolatori/convertitore-grammi-once/" class="related-card"><span class="related-icon">🍳</span><span class="related-title">Grammi ↔ Once</span></a>
+<a href="/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/" class="related-card"><span class="related-icon">🚗</span><span class="related-title">Km ↔ Miglia</span></a>
 <a href="/smart-converter-tools/calcolatori/convertitore-metri-piedi/" class="related-card"><span class="related-icon">📐</span><span class="related-title">Metri ↔ Piedi</span></a>
-<a href="/smart-converter-tools/calcolatori/convertitore-centimetri-pollici/" class="related-card"><span class="related-icon">📱</span><span class="related-title">Cm ↔ Pollici</span></a>
-<a href="/smart-converter-tools/calcolatori/convertitore-chilogrammi-libbre/" class="related-card"><span class="related-icon">⚖️</span><span class="related-title">Kg ↔ Libbre</span></a>
 </div>
 </div>
 
 <style>
 :root{--primary-purple:#667eea;--primary-purple-dark:#764ba2;--accent-green:#10b981;--gray-50:#f7fafc;--gray-100:#edf2f7;--gray-200:#e2e8f0;--gray-300:#cbd5e0;--gray-400:#a0aec0;--gray-600:#4a5568;--gray-700:#2d3748;--gray-800:#1a202c}
-
-/* Breadcrumb discreto su sfondo bianco */
-.breadcrumb{background:white;color:var(--gray-500);font-size:0.8rem;padding:0.5rem 0;margin:-1.5rem -1.5rem 0 -1.5rem;text-align:left;padding-left:1.5rem;border-bottom:1px solid var(--gray-200)}
 
 .page-hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 50%,#f093fb 100%);padding:1.25rem 1rem;text-align:center;margin:0 -1.5rem 1.5rem -1.5rem;box-shadow:0 4px 20px rgba(102,126,234,0.3)}
 .hero-icon{font-size:2.5rem;margin-bottom:0.5rem}
@@ -124,8 +126,13 @@ window.addEventListener('load',function(){document.getElementById('kg-input').va
 .content-section h2{color:var(--gray-800);font-size:1.3rem;font-weight:700;margin-bottom:0.8rem;padding-bottom:0.4rem;border-bottom:3px solid var(--primary-purple);display:inline-block}
 .content-section h3{color:var(--gray-700);font-size:1.1rem;font-weight:600;margin:1.2rem 0 0.6rem}
 .content-section p{color:var(--gray-600);margin-bottom:0.9rem;font-size:0.95rem}
-.content-section ul{margin:0.5rem 0 1rem 1.5rem;color:var(--gray-600);font-size:0.95rem}
-.content-section li{margin-bottom:0.3rem}
+
+.conversion-table{overflow-x:auto;margin:1rem 0}
+.conversion-table table{width:100%;border-collapse:collapse;background:white;border:2px solid var(--gray-200);border-radius:8px}
+.conversion-table th{background:var(--primary-purple);color:white;padding:0.75rem;font-weight:600;font-size:0.9rem}
+.conversion-table td{padding:0.65rem;border-bottom:1px solid var(--gray-200);color:var(--gray-700);font-size:0.9rem;text-align:center}
+.conversion-table tr:last-child td{border-bottom:none}
+.conversion-table tr:nth-child(even){background:var(--gray-50)}
 
 .related-tools{margin:2rem auto;max-width:800px}
 .related-tools h3{color:var(--gray-800);font-size:1.2rem;font-weight:700;margin-bottom:0.9rem}
@@ -141,24 +148,17 @@ window.addEventListener('load',function(){document.getElementById('kg-input').va
 .ad-label{font-size:0.65rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;font-weight:600}
 .ad-placeholder{background:linear-gradient(135deg,var(--gray-50) 0%,var(--gray-100) 100%);border:2px dashed var(--gray-300);border-radius:8px;display:flex;align-items:center;justify-content:center}
 
-/* Banner principale: 336x280 desktop, 300x250 mobile */
 .ad-main{width:336px;height:280px;max-width:100%}
-
-/* Banner secondario: 728x90 desktop, 300x250 mobile */
 .ad-second{width:728px;height:90px;max-width:100%}
-
 .ad-text{color:var(--gray-400);font-size:0.8rem;font-weight:500}
 
 @media (max-width:768px){
-.breadcrumb{font-size:0.75rem;padding:0.4rem 0;padding-left:1rem;margin:-1rem -1rem 0 -1rem}
 .page-hero{padding:1rem 0.8rem;margin:0 -1rem 1.25rem -1rem}
 .hero-icon{font-size:2.2rem}
 .page-hero h1{font-size:1.35rem}
 .page-hero p{font-size:0.85rem}
 .calculator-box{padding:1rem}
 .related-grid{grid-template-columns:1fr}
-
-/* Mobile: entrambi i banner diventano 300x250 */
 .ad-main{width:300px;height:250px}
 .ad-second{width:300px;height:250px}
 }

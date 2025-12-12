@@ -1,13 +1,10 @@
 ---
 layout: calculator
 title: "Convertitore Centimetri Pollici  |  cm ↔ inch  |  Online Gratis"
-description: "Converti centimetri in pollici e pollici in km istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
+description: "Converti centimetri in pollici e pollici in cm istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
 category: "convertitori-unita"
 subcategory: "lunghezza"
 ---
-
-<!-- Breadcrumb discreto su sfondo bianco -->
-<div class="breadcrumb">Convertitore Centimetri Pollici cm ↔ inch Online Gratis</div>
 
 <div class="page-hero">
   <div class="hero-icon">📱</div>
@@ -15,7 +12,7 @@ subcategory: "lunghezza"
   <p>Converti velocemente tra cm e pollici</p>
 </div>
 
-<!-- ADV SPOT 1: Banner principale above fold (Desktop: 336x280, Mobile: 300x250) -->
+<!-- ADV SPOT 1: Banner principale above fold -->
 <div class="ad-container ad-primary">
   <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-main">
@@ -31,18 +28,18 @@ subcategory: "lunghezza"
   
   <div id="cm-to-in" class="converter-panel active">
     <div class="input-wrapper"><label for="cm-input">Centimetri (cm)</label><input type="number" id="cm-input" placeholder="Inserisci valore" step="0.01" min="0"></div>
-    <button class="calc-button" onclick="convertCmToIn()"><span class="button-icon">⚡</span>Converti in Miglia</button>
+    <button class="calc-button" onclick="convertCmToIn()"><span class="button-icon">⚡</span>Converti in Pollici</button>
     <div id="cm-result" class="result-box"></div>
   </div>
   
   <div id="in-to-cm" class="converter-panel">
     <div class="input-wrapper"><label for="in-input">Pollici (inch)</label><input type="number" id="in-input" placeholder="Inserisci valore" step="0.01" min="0"></div>
-    <button class="calc-button" onclick="convertInToCm()"><span class="button-icon">⚡</span>Converti in centimetri</button>
+    <button class="calc-button" onclick="convertInToCm()"><span class="button-icon">⚡</span>Converti in Centimetri</button>
     <div id="in-result" class="result-box"></div>
   </div>
 </div>
 
-<!-- ADV SPOT 2: Banner secondario dopo calculator (Desktop: 728x90, Mobile: 300x250) -->
+<!-- ADV SPOT 2: Banner secondario dopo calculator -->
 <div class="ad-container ad-secondary">
   <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-second">
@@ -52,46 +49,51 @@ subcategory: "lunghezza"
 
 <script>
 function switchTab(d){const k=document.getElementById('cm-to-in');const m=document.getElementById('in-to-cm');const b=document.querySelectorAll('.tab-btn');if(d==='cm-to-in'){k.classList.add('active');m.classList.remove('active');b[0].classList.add('active');b[1].classList.remove('active')}else{m.classList.add('active');k.classList.remove('active');b[1].classList.add('active');b[0].classList.remove('active')}}
-function convertCmToIn(){const km=parseFloat(document.getElementById('cm-input').value);const r=document.getElementById('cm-result');if(isNaN(km)||km<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const mi=km*0.393701;r.innerHTML=`<div class="result-success"><div class="result-main">${km.toFixed(2)} km = <strong>${mi.toFixed(2)} pollici</strong></div></div>`}
-function convertInToCm(){const mi=parseFloat(document.getElementById('in-input').value);const r=document.getElementById('in-result');if(isNaN(mi)||mi<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const km=mi*2.54;r.innerHTML=`<div class="result-success"><div class="result-main">${mi.toFixed(2)} mi = <strong>${km.toFixed(2)} centimetri</strong></div></div>`}
+function convertCmToIn(){const cm=parseFloat(document.getElementById('cm-input').value);const r=document.getElementById('cm-result');if(isNaN(cm)||cm<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const inch=cm*0.393701;r.innerHTML=`<div class="result-success"><div class="result-main">${cm.toFixed(2)} cm = <strong>${inch.toFixed(2)} pollici</strong></div></div>`}
+function convertInToCm(){const inch=parseFloat(document.getElementById('in-input').value);const r=document.getElementById('in-result');if(isNaN(inch)||inch<0){r.innerHTML='<div class="error-message">⚠️ Inserisci un numero valido</div>';return}const cm=inch*2.54;r.innerHTML=`<div class="result-success"><div class="result-main">${inch.toFixed(2)} inch = <strong>${cm.toFixed(2)} centimetri</strong></div></div>`}
 window.addEventListener('load',function(){document.getElementById('cm-input').value='10';convertCmToIn()});
 </script>
 
 <div class="content-section">
-<h2>Come usare il convertitore</h2>
-<p>Seleziona la direzione di conversione usando le tab in alto, inserisci il valore numerico che vuoi convertire e premi il pulsante "Converti". Il risultato viene mostrato istantaneamente con precisione di due decimali. Puoi convertire in entrambe le direzioni senza dover ricaricare la pagina.</p>
+<h2>Come usare il convertitore centimetri pollici</h2>
+<p>Questo strumento ti permette di convertire facilmente tra centimetri e pollici in entrambe le direzioni. Seleziona la direzione di conversione usando le tab in alto, inserisci il valore e premi "Converti". Il risultato viene mostrato istantaneamente con precisione di due decimali.</p>
 
 <h3>Quando serve convertire centimetri in pollici</h3>
-<p>La conversione tra centimetri e pollici è essenziale per misure di schermi TV, monitor, abbigliamento e altezza.
+<p>La conversione tra centimetri e pollici è essenziale per misure di schermi TV e monitor, dove le dimensioni sono sempre espresse in pollici. Anche nel settore dell'abbigliamento, molti capi importati utilizzano taglie in pollici che necessitano conversione. Per progetti di fai-da-te e bricolage con materiali provenienti da paesi che usano il sistema imperiale, questa conversione è indispensabile.</p>
+
+<p>Chi lavora con design grafico e stampa deve spesso convertire tra centimetri e pollici per adattare i progetti a standard internazionali. Anche per l'altezza delle persone, alcuni paesi esprimono la statura in piedi e pollici anziché in centimetri.</p>
 
 <h3>Formula di conversione</h3>
-<p><strong>Da centimetri a pollici:</strong> 1 km = 0.393701 pollici<br><strong>Da pollici a centimetri:</strong> 1 miglio = 2.54 km</p>
+<p><strong>Da centimetri a pollici:</strong> 1 cm = 0.393701 pollici<br>
+<strong>Da pollici a centimetri:</strong> 1 pollice = 2.54 cm</p>
 
-<h3>Tabella di conversione rapida</h3>
-<p>Per riferimento veloce, ecco alcune conversioni comuni:</p>
-<ul>
-<li>1 km = 0.62 pollici</li>
-<li>5 km = 3.11 pollici</li>
-<li>10 km = 6.21 pollici</li>
-<li>50 km = 31.07 pollici</li>
-<li>100 km = 62.14 pollici</li>
-</ul>
+<p>La conversione è basata sulla definizione internazionale che stabilisce esattamente 1 pollice = 2.54 centimetri. Questa definizione è stata fissata nel 1959 ed è utilizzata in tutto il mondo per garantire uniformità nelle misurazioni.</p>
+
+<h3>Tabella conversione rapida cm - pollici</h3>
+<div class="conversion-table">
+<table>
+<tr><th>Centimetri</th><th>Pollici</th><th></th><th>Pollici</th><th>Centimetri</th></tr>
+<tr><td>1 cm</td><td>0.39 in</td><td></td><td>1 in</td><td>2.54 cm</td></tr>
+<tr><td>5 cm</td><td>1.97 in</td><td></td><td>5 in</td><td>12.70 cm</td></tr>
+<tr><td>10 cm</td><td>3.94 in</td><td></td><td>10 in</td><td>25.40 cm</td></tr>
+<tr><td>20 cm</td><td>7.87 in</td><td></td><td>20 in</td><td>50.80 cm</td></tr>
+<tr><td>50 cm</td><td>19.69 in</td><td></td><td>50 in</td><td>127.00 cm</td></tr>
+<tr><td>100 cm</td><td>39.37 in</td><td></td><td>100 in</td><td>254.00 cm</td></tr>
+</table>
+</div>
 </div>
 
 <div class="related-tools">
 <h3>Convertitori correlati</h3>
 <div class="related-grid">
 <a href="/smart-converter-tools/calcolatori/convertitore-metri-piedi/" class="related-card"><span class="related-icon">📐</span><span class="related-title">Metri ↔ Piedi</span></a>
-<a href="/smart-converter-tools/calcolatori/convertitore-centimetri-pollici/" class="related-card"><span class="related-icon">📱</span><span class="related-title">Cm ↔ Pollici</span></a>
+<a href="/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/" class="related-card"><span class="related-icon">🚗</span><span class="related-title">Km ↔ Miglia</span></a>
 <a href="/smart-converter-tools/calcolatori/convertitore-chilogrammi-libbre/" class="related-card"><span class="related-icon">⚖️</span><span class="related-title">Kg ↔ Libbre</span></a>
 </div>
 </div>
 
 <style>
 :root{--primary-purple:#667eea;--primary-purple-dark:#764ba2;--accent-green:#10b981;--gray-50:#f7fafc;--gray-100:#edf2f7;--gray-200:#e2e8f0;--gray-300:#cbd5e0;--gray-400:#a0aec0;--gray-600:#4a5568;--gray-700:#2d3748;--gray-800:#1a202c}
-
-/* Breadcrumb discreto su sfondo bianco */
-.breadcrumb{background:white;color:var(--gray-500);font-size:0.8rem;padding:0.5rem 0;margin:-1.5rem -1.5rem 0 -1.5rem;text-align:left;padding-left:1.5rem;border-bottom:1px solid var(--gray-200)}
 
 .page-hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 50%,#f093fb 100%);padding:1.25rem 1rem;text-align:center;margin:0 -1.5rem 1.5rem -1.5rem;box-shadow:0 4px 20px rgba(102,126,234,0.3)}
 .hero-icon{font-size:2.5rem;margin-bottom:0.5rem}
@@ -124,8 +126,13 @@ window.addEventListener('load',function(){document.getElementById('cm-input').va
 .content-section h2{color:var(--gray-800);font-size:1.3rem;font-weight:700;margin-bottom:0.8rem;padding-bottom:0.4rem;border-bottom:3px solid var(--primary-purple);display:inline-block}
 .content-section h3{color:var(--gray-700);font-size:1.1rem;font-weight:600;margin:1.2rem 0 0.6rem}
 .content-section p{color:var(--gray-600);margin-bottom:0.9rem;font-size:0.95rem}
-.content-section ul{margin:0.5rem 0 1rem 1.5rem;color:var(--gray-600);font-size:0.95rem}
-.content-section li{margin-bottom:0.3rem}
+
+.conversion-table{overflow-x:auto;margin:1rem 0}
+.conversion-table table{width:100%;border-collapse:collapse;background:white;border:2px solid var(--gray-200);border-radius:8px}
+.conversion-table th{background:var(--primary-purple);color:white;padding:0.75rem;font-weight:600;font-size:0.9rem}
+.conversion-table td{padding:0.65rem;border-bottom:1px solid var(--gray-200);color:var(--gray-700);font-size:0.9rem;text-align:center}
+.conversion-table tr:last-child td{border-bottom:none}
+.conversion-table tr:nth-child(even){background:var(--gray-50)}
 
 .related-tools{margin:2rem auto;max-width:800px}
 .related-tools h3{color:var(--gray-800);font-size:1.2rem;font-weight:700;margin-bottom:0.9rem}
@@ -141,24 +148,17 @@ window.addEventListener('load',function(){document.getElementById('cm-input').va
 .ad-label{font-size:0.65rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;font-weight:600}
 .ad-placeholder{background:linear-gradient(135deg,var(--gray-50) 0%,var(--gray-100) 100%);border:2px dashed var(--gray-300);border-radius:8px;display:flex;align-items:center;justify-content:center}
 
-/* Banner principale: 336x280 desktop, 300x250 mobile */
 .ad-main{width:336px;height:280px;max-width:100%}
-
-/* Banner secondario: 728x90 desktop, 300x250 mobile */
 .ad-second{width:728px;height:90px;max-width:100%}
-
 .ad-text{color:var(--gray-400);font-size:0.8rem;font-weight:500}
 
 @media (max-width:768px){
-.breadcrumb{font-size:0.75rem;padding:0.4rem 0;padding-left:1rem;margin:-1rem -1rem 0 -1rem}
 .page-hero{padding:1rem 0.8rem;margin:0 -1rem 1.25rem -1rem}
 .hero-icon{font-size:2.2rem}
 .page-hero h1{font-size:1.35rem}
 .page-hero p{font-size:0.85rem}
 .calculator-box{padding:1rem}
 .related-grid{grid-template-columns:1fr}
-
-/* Mobile: entrambi i banner diventano 300x250 */
 .ad-main{width:300px;height:250px}
 .ad-second{width:300px;height:250px}
 }
