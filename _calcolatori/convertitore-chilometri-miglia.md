@@ -6,8 +6,6 @@ category: "convertitori-unita"
 subcategory: "lunghezza"
 ---
 
-<!-- Breadcrumb rimosso - viene mostrato solo il page-hero -->
-
 <div class="page-hero">
   <div class="hero-icon">🚗</div>
   <h1>Convertitore Chilometri Miglia</h1>
@@ -18,7 +16,7 @@ subcategory: "lunghezza"
 <div class="ad-container ad-primary">
   <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-main">
-    <span class="ad-text">Banner 336×280</span>
+    <span class="ad-text">Banner 728×90</span>
   </div>
 </div>
 
@@ -151,10 +149,10 @@ window.addEventListener('load',function(){document.getElementById('km-input').va
 .ad-label{font-size:0.65rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;font-weight:600}
 .ad-placeholder{background:linear-gradient(135deg,var(--gray-50) 0%,var(--gray-100) 100%);border:2px dashed var(--gray-300);border-radius:8px;display:flex;align-items:center;justify-content:center}
 
-/* Banner principale: sempre rettangolare */
-.ad-main{width:336px;height:280px;max-width:100%}
+/* Banner principale: 728×90 desktop e mobile */
+.ad-main{width:728px;height:90px;max-width:100%}
 
-/* Banner secondario: sempre rettangolare */
+/* Banner secondario: 728×90 desktop e mobile */
 .ad-second{width:728px;height:90px;max-width:100%}
 
 .ad-text{color:var(--gray-400);font-size:0.8rem;font-weight:500}
@@ -167,8 +165,8 @@ window.addEventListener('load',function(){document.getElementById('km-input').va
 .calculator-box{padding:1rem}
 .related-grid{grid-template-columns:1fr}
 
-/* Mobile: entrambi i banner diventano 300x250 rettangolari */
-.ad-main{width:300px;height:250px}
-.ad-second{width:300px;height:250px}
+/* Mobile: banner rimangono 728x90 (si adattano con max-width:100%) */
+.ad-main{width:728px;height:90px}
+.ad-second{width:728px;height:90px}
 }
 </style>
