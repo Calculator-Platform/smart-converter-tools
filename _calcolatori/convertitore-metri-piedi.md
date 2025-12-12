@@ -146,7 +146,7 @@ window.addEventListener('load',function(){document.getElementById('m-input').val
 .ad-label{font-size:0.65rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;font-weight:600}
 .ad-placeholder{background:linear-gradient(135deg,var(--gray-50) 0%,var(--gray-100) 100%);border:2px dashed var(--gray-300);border-radius:8px;display:flex;align-items:center;justify-content:center}
 
-.ad-main{width:336px;height:280px;max-width:100%}
+.ad-main{width:728px;height:90px;max-width:100%}
 .ad-second{width:728px;height:90px;max-width:100%}
 .ad-text{color:var(--gray-400);font-size:0.8rem;font-weight:500}
 
