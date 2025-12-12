@@ -23,13 +23,13 @@ layout: default
   <span class="current">{{ page.title | remove: ' | ' | split: '|' | first }}</span>
 </nav>
 
+<!-- SEO Title (non H1, solo testo per keyword) -->
+<div class="page-title-seo">
+  {{ page.title }}
+</div>
+
 <!-- Calculator Page Content -->
 <article class="calculator-page">
-  
-  <!-- Page Title -->
-  <header class="page-header">
-    <h1>{{ page.title | remove: ' | ' | split: '|' | first }}</h1>
-  </header>
 
   <!-- Calculator Tool (from frontmatter) -->
   {% if page.calculator_html %}
@@ -148,45 +148,48 @@ layout: default
 <style>
 /* Breadcrumb Styling */
 .breadcrumb {
-  font-size: 0.9em;
-  margin-bottom: 20px;
-  padding: 10px 0;
-  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+  color: #718096;
 }
 
 .breadcrumb a {
-  color: #0066FF;
+  color: #667eea;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .breadcrumb a:hover {
+  color: #764ba2;
   text-decoration: underline;
 }
 
 .breadcrumb .separator {
-  margin: 0 8px;
-  color: #999;
+  margin: 0 0.5rem;
+  color: #cbd5e0;
 }
 
 .breadcrumb .current {
-  color: #333;
-  font-weight: 500;
+  color: #4a5568;
+  font-weight: 400;
+}
+
+/* SEO Title - Piccolo, nero su bianco, NON è H1 */
+.page-title-seo {
+  font-size: 0.9rem;
+  color: #2d3748;
+  background: white;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 /* Calculator Page Layout */
 .calculator-page {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.page-header {
-  margin-bottom: 30px;
-}
-
-.page-header h1 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 10px;
 }
 
 /* Calculator Tool Section */
@@ -208,7 +211,7 @@ layout: default
   font-size: 1.6em;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #0066FF;
+  color: #667eea;
 }
 
 .calculator-content h3 {
@@ -265,14 +268,14 @@ layout: default
 }
 
 .calculator-card:hover {
-  border-color: #0066FF;
-  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.1);
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
   transform: translateY(-2px);
 }
 
 .calculator-card h3 {
   font-size: 1.1em;
-  color: #0066FF;
+  color: #667eea;
   margin-bottom: 10px;
 }
 
@@ -284,16 +287,21 @@ layout: default
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
+  }
+  
+  .page-title-seo {
+    font-size: 0.85rem;
+  }
+  
   .calculator-tool {
     padding: 20px;
   }
   
   .calculator-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .page-header h1 {
-    font-size: 1.6em;
   }
 }
 </style>
