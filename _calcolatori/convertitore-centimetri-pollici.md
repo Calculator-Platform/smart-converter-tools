@@ -14,7 +14,6 @@ subcategory: "lunghezza"
 
 <!-- ADV SPOT 1: Banner principale above fold -->
 <div class="ad-container ad-primary">
-  <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-main">
     <span class="ad-text">Banner 336×280</span>
   </div>
@@ -41,7 +40,6 @@ subcategory: "lunghezza"
 
 <!-- ADV SPOT 2: Banner secondario dopo calculator -->
 <div class="ad-container ad-secondary">
-  <span class="ad-label">Pubblicità</span>
   <div class="ad-placeholder ad-second">
     <span class="ad-text">Banner 728×90</span>
   </div>
