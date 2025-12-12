@@ -90,9 +90,6 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
 </section>
 
 <style>
-/* ============================================
-   HERO SECTION - COMPATTA E MODERNA
-   ============================================ */
 .hero-compact {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   padding: 2rem 1.5rem;
@@ -110,15 +107,13 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
 }
 
 .hero-compact p {
-  color: rgba(255, 255, 255, 0.95);
+  color: white;
   font-size: 1rem;
   margin: 0;
   font-weight: 400;
+  opacity: 0.95;
 }
 
-/* ============================================
-   SEZIONI E TITOLI
-   ============================================ */
 .section-title {
   color: #2d3748;
   font-size: 1.5rem;
@@ -133,9 +128,6 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   margin-bottom: 2.5rem;
 }
 
-/* ============================================
-   TOOL CARDS - COMPATTE E MODERNE
-   ============================================ */
 .tool-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -205,9 +197,6 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   line-height: 1.4;
 }
 
-/* ============================================
-   FEATURES - COMPATTA
-   ============================================ */
 .features-section {
   background: #f7fafc;
   padding: 2rem 1.5rem;
@@ -245,9 +234,6 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   margin: 0;
 }
 
-/* ============================================
-   ADVERTISING CONTAINERS - 2 BANNER DESKTOP
-   ============================================ */
 .ad-container {
   display: flex;
   flex-direction: column;
@@ -279,7 +265,6 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .ad-leaderboard {
@@ -300,17 +285,11 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   font-weight: 500;
 }
 
-/* Hide leaderboard on mobile */
 @media (max-width: 768px) {
   .ad-hero {
     display: none;
   }
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 768px) {
+  
   .hero-compact {
     padding: 1.5rem 1rem;
     margin: -1rem -1rem 1.5rem -1rem;
