@@ -7,8 +7,7 @@ subcategory: "lunghezza"
 ---
 
 <div class="page-hero">
-  <div class="hero-icon">🚗</div>
-  <h1>Convertitore Chilometri Miglia</h1>
+  <h1>🚗 Convertitore Chilometri Miglia</h1>
   <p>Converti velocemente tra km e miglia</p>
 </div>
 
@@ -97,7 +96,6 @@ window.addEventListener('load',function(){document.getElementById('km-input').va
 :root{--primary-purple:#667eea;--primary-purple-dark:#764ba2;--accent-green:#10b981;--gray-50:#f7fafc;--gray-100:#edf2f7;--gray-200:#e2e8f0;--gray-300:#cbd5e0;--gray-400:#a0aec0;--gray-600:#4a5568;--gray-700:#2d3748;--gray-800:#1a202c}
 
 .page-hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 50%,#f093fb 100%);padding:1.25rem 1rem;text-align:center;margin:0 -1.5rem 1.5rem -1.5rem;box-shadow:0 4px 20px rgba(102,126,234,0.3)}
-.hero-icon{font-size:2.5rem;margin-bottom:0.5rem}
 .page-hero h1{color:white;font-size:1.5rem;font-weight:700;margin:0 0 0.4rem 0;line-height:1.2}
 .page-hero p{color:white;font-size:0.9rem;margin:0;opacity:0.95}
 .calculator-box{background:white;border:2px solid var(--gray-200);border-radius:12px;padding:1.25rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);max-width:600px;margin:0 auto 1.5rem}
@@ -159,7 +157,6 @@ window.addEventListener('load',function(){document.getElementById('km-input').va
 
 @media (max-width:768px){
 .page-hero{padding:1rem 0.8rem;margin:0 -1rem 1.25rem -1rem}
-.hero-icon{font-size:2.2rem}
 .page-hero h1{font-size:1.35rem}
 .page-hero p{font-size:0.85rem}
 .calculator-box{padding:1rem}
