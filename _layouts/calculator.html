@@ -23,7 +23,7 @@ layout: default
     <a href="{{ site.baseurl }}/elettronica/">Elettronica</a>
   {% endif %}
   <span class="separator">›</span>
-  <span class="current">{{ page.title | remove: ' | ' | split: '|' | first }}</span>
+  <span class="current">{{ page.title | split: '|' | first | strip }}</span>
 </nav>
 
 <!-- SEO Title (non H1, solo testo per keyword) -->
