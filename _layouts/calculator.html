@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<!-- Calculator CSS -->
+
+<!-- Calculator-specific CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/calculator.css' | relative_url }}">
+
 <!-- Breadcrumb Navigation -->
 <nav class="breadcrumb" aria-label="breadcrumb">
   <a href="{{ site.baseurl }}/">Home</a>
@@ -31,74 +33,7 @@ layout: default
 
 <!-- Calculator Page Content -->
 <article class="calculator-page">
-  <!-- ADV SPOT 1: Banner principale -->
-  <div class="ad-container ad-primary">
-    <div class="ad-placeholder ad-main">
-      <span class="ad-text">Banner 728×90</span>
-    </div>
-  </div>
-
-  <!-- Calculator Tool (from frontmatter) -->
-  {% if page.calculator_html %}
-  <div class="calculator-tool">
-    {{ page.calculator_html }}
-  </div>
-  {% endif %}
-
-  <!-- Calculator JavaScript (from frontmatter) -->
-  {% if page.calculator_js %}
-  <script>
-    {{ page.calculator_js }}
-  </script>
-  {% endif %}
-
-  <!-- SEO Content (from markdown body) -->
-  <div class="calculator-content">
-    {{ content }}
-    <!-- ADV SPOT 2: Banner secondario -->
-  <div class="ad-container ad-secondary">
-    <div class="ad-placeholder ad-second">
-      <span class="ad-text">Banner 728×90</span>
-    </div>
-  </div>
-
-
-  <!-- Related Calculators (Same Category) -->
-  {% if page.related %}
-  <section class="related-calculators">
-    <h2>Calcolatori Correlati</h2>
-    <div class="calculator-grid">
-      {% for related_slug in page.related limit:5 %}
-        {% assign related_page = site.calcolatori | where: "slug", related_slug | first %}
-        {% if related_page %}
-        <a href="{{ related_page.url | relative_url }}" class="calculator-card">
-          <h3>{{ related_page.title | remove: ' | ' | split: '|' | first }}</h3>
-          <p>{{ related_page.description | truncate: 80 }}</p>
-        </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
-  <!-- Cross-Category Links -->
-  {% if page.cross_category %}
-  <section class="cross-category">
-    <h2>Altri Strumenti Utili</h2>
-    <div class="calculator-grid">
-      {% for cross_slug in page.cross_category limit:3 %}
-        {% assign cross_page = site.calcolatori | where: "slug", cross_slug | first %}
-        {% if cross_page %}
-        <a href="{{ cross_page.url | relative_url }}" class="calculator-card">
-          <h3>{{ cross_page.title | remove: ' | ' | split: '|' | first }}</h3>
-          <p>{{ cross_page.description | truncate: 80 }}</p>
-        </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
+  {{ content }}
 </article>
 
 <!-- Structured Data - Schema.org WebApplication -->
