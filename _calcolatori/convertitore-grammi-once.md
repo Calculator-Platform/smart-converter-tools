@@ -17,6 +17,8 @@ subcategory: "peso"
   <div class="ad-placeholder ad-main">
     <span class="ad-text">Banner 728×90</span>
   </div>
+</div>
+
 <div class="calculator-box">
   <div class="converter-tabs">
     <button class="tab-btn active" onclick="switchTab('g-to-oz')"><span class="tab-label">Grammi → Once</span></button>
