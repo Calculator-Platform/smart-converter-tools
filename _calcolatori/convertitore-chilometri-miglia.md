@@ -42,7 +42,7 @@ subcategory: "lunghezza"
   <div class="ad-placeholder ad-second">
     <span class="ad-text">Banner 728×90</span>
   </div>
-</div>
+
 
 <script>
 function switchTab(d){const k=document.getElementById('km-to-mi');const m=document.getElementById('mi-to-km');const b=document.querySelectorAll('.tab-btn');if(d==='km-to-mi'){k.classList.add('active');m.classList.remove('active');b[0].classList.add('active');b[1].classList.remove('active')}else{m.classList.add('active');k.classList.remove('active');b[1].classList.add('active');b[0].classList.remove('active')}}
