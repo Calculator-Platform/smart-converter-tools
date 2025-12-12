@@ -31,6 +31,12 @@ layout: default
 
 <!-- Calculator Page Content -->
 <article class="calculator-page">
+  <!-- ADV SPOT 1: Banner principale -->
+  <div class="ad-container ad-primary">
+    <div class="ad-placeholder ad-main">
+      <span class="ad-text">Banner 728×90</span>
+    </div>
+  </div>
 
   <!-- Calculator Tool (from frontmatter) -->
   {% if page.calculator_html %}
@@ -49,7 +55,13 @@ layout: default
   <!-- SEO Content (from markdown body) -->
   <div class="calculator-content">
     {{ content }}
+    <!-- ADV SPOT 2: Banner secondario -->
+  <div class="ad-container ad-secondary">
+    <div class="ad-placeholder ad-second">
+      <span class="ad-text">Banner 728×90</span>
+    </div>
   </div>
+
 
   <!-- Related Calculators (Same Category) -->
   {% if page.related %}
