@@ -17,6 +17,7 @@ subcategory: "lunghezza"
   <div class="ad-placeholder ad-main">
     <span class="ad-text">Banner 728×90</span>
   </div>
+</div>
 
 
 <div class="calculator-box">
