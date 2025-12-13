@@ -11,12 +11,12 @@ subcategory: "peso"
   <p>Converti velocemente tra kg e libbre</p>
 </div>
 
-<!-- ADV SPOT 1: Banner principale above fold -->
-<div class="ad-container ad-primary">
-  <div class="ad-placeholder ad-main">
-    <span class="ad-text">Banner 728×90</span>
-  </div>
-</div>
+<!-- Banner Header Tool -->
+{% include adsense-banner.html 
+   class="ad-primary" 
+   slot_id=site.google_adsense.slots.tool_header 
+   size="ad-main"
+   dimensions="728×90" %}
 
 <div class="calculator-box">
   <div class="converter-tabs">
@@ -51,12 +51,12 @@ subcategory: "peso"
   </div>
 </div>
 
-<!-- ADV SPOT 2: Banner secondario dopo calculator -->
-<div class="ad-container ad-secondary">
-  <div class="ad-placeholder ad-second">
-    <span class="ad-text">Banner 728×90</span>
-  </div>
-</div>
+<!-- Banner Footer Tool -->
+{% include adsense-banner.html 
+   class="ad-secondary" 
+   slot_id=site.google_adsense.slots.tool_footer 
+   size="ad-second"
+   dimensions="728×90" %}
 
 <script>
 function switchTab(tabId) {
