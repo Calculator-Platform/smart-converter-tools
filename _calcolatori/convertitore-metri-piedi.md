@@ -4,6 +4,7 @@ title: "Convertitore Metri Piedi | m ↔ ft | Online Gratis"
 description: "Converti metri in piedi e piedi in metri istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
 category: "convertitori-unita"
 subcategory: "lunghezza"
+emoji: "📐"
 ---
 
 <div class="page-hero">
