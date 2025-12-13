@@ -4,6 +4,7 @@ title: "Convertitore Centimetri Pollici | cm ↔ inch | Online Gratis"
 description: "Converti centimetri in pollici e pollici in cm istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
 category: "convertitori-unita"
 subcategory: "lunghezza"
+emoji: "📱"
 ---
 
 <div class="page-hero">
