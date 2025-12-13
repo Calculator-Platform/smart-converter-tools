@@ -4,6 +4,7 @@ title: "Convertitore Chilometri Miglia | km ↔ mi | Online Gratis"
 description: "Converti chilometri in miglia e miglia in km istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
 category: "convertitori-unita"
 subcategory: "lunghezza"
+emoji: "🚗"
 ---
 
 <div class="page-hero">
