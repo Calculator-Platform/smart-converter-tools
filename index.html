@@ -1,19 +1,20 @@
 ---
 layout: default
 title: "Calcolatori e Convertitori Online Gratuiti | Smart Converter Tools"
-description: "115+ strumenti gratuiti: convertitori unità, calcolatori matematici, geometrici, finanziari, salute e altro. Veloci, precisi e sempre gratuiti."
+description: "103+ strumenti gratuiti: convertitori unità, calcolatori matematici, geometrici, finanziari, salute e altro. Veloci, precisi e sempre gratuiti."
 ---
 
 <div class="hero-compact">
-  <h1>115+ Calcolatori Online Gratuiti</h1>
+  <h1>103+ Calcolatori Online Gratuiti</h1>
   <p>Strumenti professionali per calcoli veloci e precisi</p>
 </div>
 
-<div class="ad-container ad-hero">
-  <div class="ad-placeholder ad-leaderboard">
-    <span class="ad-text">Banner 728×90</span>
-  </div>
-</div>
+<!-- Banner Hero Homepage -->
+{% include adsense-banner.html 
+   class="ad-hero" 
+   slot_id=site.google_adsense.slots.home_hero 
+   size="ad-leaderboard"
+   dimensions="728×90" %}
 
 <!-- CATEGORIE PRINCIPALI -->
 <section class="categories-section">
@@ -78,11 +79,12 @@ description: "115+ strumenti gratuiti: convertitori unità, calcolatori matemati
   </div>
 </section>
 
-<div class="ad-container ad-primary">
-  <div class="ad-placeholder ad-rectangle">
-    <span class="ad-text">Banner 336×280</span>
-  </div>
-</div>
+<!-- Banner Mid Homepage -->
+{% include adsense-banner.html 
+   class="ad-primary" 
+   slot_id=site.google_adsense.slots.home_mid 
+   size="ad-rectangle"
+   dimensions="336×280" %}
 
 <!-- STRUMENTI PIÙ POPOLARI (dinamico - primi 6 tool) -->
 <section class="featured-section">
