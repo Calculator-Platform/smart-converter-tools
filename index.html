@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Calcolatori e Convertitori Online Gratuiti | Smart Converter Tools"
-description: "Strumenti gratuiti per convertire unità di misura. Converti chilometri in miglia, kg in libbre, metri in piedi e molto altro."
+description: "115+ strumenti gratuiti: convertitori unità, calcolatori matematici, geometrici, finanziari, salute e altro. Veloci, precisi e sempre gratuiti."
 ---
 
 <div class="hero-compact">
-  <h1>Calcolatori Online Gratuiti</h1>
+  <h1>115+ Calcolatori Online Gratuiti</h1>
   <p>Strumenti professionali per calcoli veloci e precisi</p>
 </div>
 
@@ -15,38 +15,65 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   </div>
 </div>
 
-<section class="tools-grid">
-  <h2 class="section-title">📏 Convertitori Unità</h2>
+<!-- CATEGORIE PRINCIPALI -->
+<section class="categories-section">
+  <h2 class="section-title">Esplora per Categoria</h2>
   
-  <div class="tool-cards">
-    <a href="{{ site.baseurl }}/calcolatori/convertitore-chilometri-miglia/" class="tool-card">
-      <div class="tool-icon">🚗</div>
-      <h3>Chilometri ↔ Miglia</h3>
-      <p>Converti km in miglia velocemente</p>
+  <div class="category-cards">
+    <a href="{{ site.baseurl }}/convertitori-unita/" class="category-card">
+      <span class="category-icon">📏</span>
+      <h3>Convertitori Unità</h3>
+      <p>Lunghezza, peso, volume, temperatura e altro</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "convertitori-unita" | size %}{{ count }} strumenti</span>
     </a>
     
-    <a href="{{ site.baseurl }}/calcolatori/convertitore-metri-piedi/" class="tool-card">
-      <div class="tool-icon">📐</div>
-      <h3>Metri ↔ Piedi</h3>
-      <p>Converti misure in metri e piedi</p>
+    <a href="{{ site.baseurl }}/calcolatori-matematici/" class="category-card">
+      <span class="category-icon">🔢</span>
+      <h3>Calcolatori Matematici</h3>
+      <p>Percentuali, frazioni, statistiche, sistemi numerici</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "calcolatori-matematici" | size %}{{ count }} strumenti</span>
     </a>
     
-    <a href="{{ site.baseurl }}/calcolatori/convertitore-centimetri-pollici/" class="tool-card">
-      <div class="tool-icon">📱</div>
-      <h3>Centimetri ↔ Pollici</h3>
-      <p>Converti cm in pollici facilmente</p>
+    <a href="{{ site.baseurl }}/calcolatori-geometrici/" class="category-card">
+      <span class="category-icon">📐</span>
+      <h3>Calcolatori Geometrici</h3>
+      <p>Area, perimetro, volume per figure 2D e 3D</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "calcolatori-geometrici" | size %}{{ count }} strumenti</span>
     </a>
     
-    <a href="{{ site.baseurl }}/calcolatori/convertitore-chilogrammi-libbre/" class="tool-card">
-      <div class="tool-icon">⚖️</div>
-      <h3>Chilogrammi ↔ Libbre</h3>
-      <p>Converti peso kg in libbre</p>
+    <a href="{{ site.baseurl }}/calcolatori-finanziari/" class="category-card">
+      <span class="category-icon">💰</span>
+      <h3>Calcolatori Finanziari</h3>
+      <p>Interesse, mutui, risparmi, investimenti</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "calcolatori-finanziari" | size %}{{ count }} strumenti</span>
     </a>
     
-    <a href="{{ site.baseurl }}/calcolatori/convertitore-grammi-once/" class="tool-card">
-      <div class="tool-icon">🍳</div>
-      <h3>Grammi ↔ Once</h3>
-      <p>Perfetto per ricette e cucina</p>
+    <a href="{{ site.baseurl }}/salute-fitness/" class="category-card">
+      <span class="category-icon">💪</span>
+      <h3>Salute e Fitness</h3>
+      <p>BMI, calorie, TDEE, gravidanza, allenamento</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "salute-fitness" | size %}{{ count }} strumenti</span>
+    </a>
+    
+    <a href="{{ site.baseurl }}/tempo-data/" class="category-card">
+      <span class="category-icon">📅</span>
+      <h3>Tempo e Data</h3>
+      <p>Differenze date, età, countdown, fusi orari</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "tempo-data" | size %}{{ count }} strumenti</span>
+    </a>
+    
+    <a href="{{ site.baseurl }}/generatori-casuali/" class="category-card">
+      <span class="category-icon">🎲</span>
+      <h3>Generatori Casuali</h3>
+      <p>Numeri, password, colori, dadi, scelte</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "generatori-casuali" | size %}{{ count }} strumenti</span>
+    </a>
+    
+    <a href="{{ site.baseurl }}/strumenti-specialistici/" class="category-card">
+      <span class="category-icon">🔧</span>
+      <h3>Strumenti Specialistici</h3>
+      <p>Costruzione, taglie, cucina, educazione, tech</p>
+      <span class="category-count">{% assign count = site.calcolatori | where: "category", "strumenti-specialistici" | size %}{{ count }} strumenti</span>
     </a>
   </div>
 </section>
@@ -57,6 +84,29 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   </div>
 </div>
 
+<!-- STRUMENTI PIÙ POPOLARI (dinamico - primi 6 tool) -->
+<section class="featured-section">
+  <h2 class="section-title">⭐ Strumenti Più Usati</h2>
+  
+  <div class="tool-cards">
+    {% comment %}
+    Mostra primi 6 tool dalla collection
+    In futuro: aggiungi campo "featured: true" nel frontmatter per scegliere manualmente
+    {% endcomment %}
+    
+    {% assign featured_tools = site.calcolatori | sort: "date" | reverse | limit: 6 %}
+    
+    {% for tool in featured_tools %}
+    <a href="{{ tool.url | relative_url }}" class="tool-card">
+      <div class="tool-icon">{{ tool.emoji | default: "🔧" }}</div>
+      <h3>{{ tool.title | split: "|" | first | strip }}</h3>
+      <p>{{ tool.description | truncate: 80 }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
 <section class="features-section">
   <div class="feature-grid">
     <div class="feature">
@@ -82,12 +132,47 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
   </div>
 </section>
 
+<!-- Structured Data - WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}{{ site.baseurl }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": "it-IT",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}"
+  }
+}
+</script>
+
 <style>
 .hero-compact{background:linear-gradient(135deg,#667eea 0%,#764ba2 50%,#f093fb 100%);padding:2rem 1.5rem;text-align:center;margin:-1.5rem -1.5rem 2rem -1.5rem;box-shadow:0 4px 20px rgba(102,126,234,0.3)}
 .hero-compact h1{color:white;font-size:1.75rem;font-weight:700;margin:0 0 0.5rem 0;letter-spacing:-0.02em}
 .hero-compact p{color:white;font-size:1rem;margin:0;font-weight:400;opacity:0.95}
+
 .section-title{color:#2d3748;font-size:1.5rem;font-weight:700;margin:0 0 1.5rem 0;display:flex;align-items:center;gap:0.5rem}
-.tools-grid{margin-bottom:2.5rem}
+
+.categories-section{margin-bottom:2.5rem}
+.category-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.category-card{background:white;border:2px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-decoration:none;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.category-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#667eea,#764ba2);transform:scaleX(0);transition:transform 0.3s ease}
+.category-card:hover::before{transform:scaleX(1)}
+.category-card:hover{border-color:#667eea;transform:translateY(-4px);box-shadow:0 12px 24px rgba(102,126,234,0.15)}
+.category-icon{font-size:2.5rem;margin-bottom:0.75rem;filter:grayscale(0.2);transition:all 0.3s ease}
+.category-card:hover .category-icon{filter:grayscale(0);transform:scale(1.1)}
+.category-card h3{color:#2d3748;font-size:1.2rem;font-weight:600;margin:0 0 0.5rem 0}
+.category-card p{color:#718096;font-size:0.9rem;margin:0 0 0.75rem 0;line-height:1.4;flex-grow:1}
+.category-count{color:#667eea;font-size:0.85rem;font-weight:600;display:inline-block;padding:0.25rem 0.75rem;background:#f7fafc;border-radius:20px}
+
+.featured-section{margin-bottom:2.5rem}
 .tool-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
 .tool-card{background:white;border:2px solid #e2e8f0;border-radius:12px;padding:1.25rem;text-decoration:none;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
 .tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#667eea,#764ba2);transform:scaleX(0);transition:transform 0.3s ease}
@@ -97,36 +182,31 @@ description: "Strumenti gratuiti per convertire unità di misura. Converti chilo
 .tool-card:hover .tool-icon{filter:grayscale(0);transform:scale(1.1)}
 .tool-card h3{color:#2d3748;font-size:1.1rem;font-weight:600;margin:0 0 0.5rem 0}
 .tool-card p{color:#718096;font-size:0.9rem;margin:0;line-height:1.4}
+
 .features-section{background:#f7fafc;padding:2rem 1.5rem;margin:2.5rem -1.5rem -1.5rem -1.5rem;border-top:1px solid #e2e8f0}
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.5rem;max-width:800px;margin:0 auto}
 .feature{text-align:center}
 .feature-icon{font-size:2rem;margin-bottom:0.5rem}
 .feature h3{color:#2d3748;font-size:1rem;font-weight:600;margin:0 0 0.25rem 0}
 .feature p{color:#718096;font-size:0.85rem;margin:0}
+
 .ad-container{display:flex;flex-direction:column;align-items:center;margin:2rem 0}
 .ad-hero{margin:1.5rem 0 2rem 0}
 .ad-primary{margin:2.5rem 0}
-.ad-label{font-size:0.7rem;color:#a0aec0;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;font-weight:500}
 .ad-placeholder{background:linear-gradient(135deg,#f7fafc 0%,#edf2f7 100%);border:2px dashed #cbd5e0;border-radius:8px;display:flex;align-items:center;justify-content:center}
-
-/* Banner homepage: 728x90 desktop, 320x50 mobile (rettangolare piccolo) */
 .ad-leaderboard{width:728px;height:90px;max-width:100%}
-
-/* Banner secondario: 336x280 desktop, 300x250 mobile */
 .ad-rectangle{width:336px;height:280px;max-width:100%}
-
 .ad-text{color:#a0aec0;font-size:0.85rem;font-weight:500}
 
 @media (max-width:768px){
-/* Banner superiore diventa piccolo ma rimane visibile e rettangolare */
 .ad-leaderboard{width:320px;height:50px}
-
 .ad-rectangle{width:300px;height:250px}
-
 .hero-compact{padding:1.5rem 1rem;margin:-1rem -1rem 1.5rem -1rem}
 .hero-compact h1{font-size:1.5rem}
 .hero-compact p{font-size:0.95rem}
 .section-title{font-size:1.3rem}
+.category-cards{grid-template-columns:1fr;gap:1rem}
+.category-card{padding:1.25rem}
 .tool-cards{grid-template-columns:1fr;gap:0.75rem}
 .tool-card{padding:1rem}
 .feature-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
