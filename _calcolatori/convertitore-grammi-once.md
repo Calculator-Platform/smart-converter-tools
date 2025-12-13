@@ -5,6 +5,7 @@ description: "Converti grammi in once e once in grammi istantaneamente. Calcolat
 category: "convertitori-unita"
 subcategory: "peso"
 emoji: "⚖️"
+emoji: "🍳"
 ---
 
 <div class="page-hero">
