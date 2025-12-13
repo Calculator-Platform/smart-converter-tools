@@ -1,0 +1,159 @@
+---
+layout: default
+---
+
+{% comment %}
+===========================================
+TEMPLATE PAGINA CATEGORIA
+===========================================
+Uso: Crea file per ogni categoria con questo layout
+Esempio: convertitori-unita.html
+
+Frontmatter richiesto:
+- title: "Titolo SEO"
+- description: "Descrizione SEO"
+- category: "convertitori-unita" (deve matchare con field nei tool)
+- category_name: "Convertitori di Unità" (nome leggibile)
+- category_icon: "📏"
+- intro: "Testo introduttivo 200-300 parole"
+===========================================
+{% endcomment %}
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="{{ site.baseurl }}/">Home</a>
+  <span class="separator">›</span>
+  <span class="current">{{ page.category_name }}</span>
+</nav>
+
+<!-- Hero Section -->
+<div class="page-hero">
+  <h1>{{ page.category_icon }} {{ page.category_name }}</h1>
+  {% assign tool_count = site.calcolatori | where: "category", page.category | size %}
+  <p>{{ tool_count }} strumenti professionali gratuiti</p>
+</div>
+
+<!-- ADV SPOT -->
+<div class="ad-container ad-primary">
+  <div class="ad-placeholder ad-main">
+    <span class="ad-text">Banner 728×90</span>
+  </div>
+</div>
+
+<!-- Intro Section -->
+<div class="content-section">
+  {{ page.intro }}
+</div>
+
+<!-- Tools Grid - DINAMICO -->
+<section class="tools-grid">
+  <h2>Tutti gli Strumenti</h2>
+  
+  <div class="tool-cards">
+    {% assign tools = site.calcolatori | where: "category", page.category | sort: "title" %}
+    
+    {% if tools.size > 0 %}
+      {% for tool in tools %}
+      <a href="{{ tool.url | relative_url }}" class="tool-card">
+        <span class="tool-icon">{{ tool.emoji | default: "🔧" }}</span>
+        <h3>{{ tool.title | split: "|" | first | strip }}</h3>
+        <p>{{ tool.description | truncate: 100 }}</p>
+      </a>
+      {% endfor %}
+    {% else %}
+      <p class="no-tools">Nessuno strumento disponibile in questa categoria al momento. Torna presto!</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ADV SPOT 2 -->
+<div class="ad-container ad-secondary">
+  <div class="ad-placeholder ad-second">
+    <span class="ad-text">Banner 336×280</span>
+  </div>
+</div>
+
+<!-- Structured Data - CollectionPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ page.category_name }}",
+  "description": "{{ page.description }}",
+  "url": "{{ page.url | absolute_url }}",
+  "numberOfItems": {{ tool_count }},
+  "inLanguage": "it-IT"
+}
+</script>
+
+<!-- Structured Data - BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.category_name }}",
+      "item": "{{ page.url | absolute_url }}"
+    }
+  ]
+}
+</script>
+
+<style>
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;margin-bottom:1.5rem;color:#718096}
+.breadcrumb a{color:#667eea;text-decoration:none;transition:color 0.2s}
+.breadcrumb a:hover{color:#764ba2}
+.separator{color:#cbd5e0}
+.current{color:#2d3748;font-weight:500}
+
+.page-hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 50%,#f093fb 100%);padding:2.5rem 1.5rem;text-align:center;margin:-1.5rem -1.5rem 2rem -1.5rem;box-shadow:0 4px 20px rgba(102,126,234,0.3);border-radius:0 0 16px 16px}
+.page-hero h1{color:white;font-size:2rem;font-weight:700;margin:0 0 0.5rem 0;letter-spacing:-0.02em}
+.page-hero p{color:white;font-size:1.1rem;margin:0;font-weight:400;opacity:0.95}
+
+.content-section{margin-bottom:2.5rem;color:#4a5568;line-height:1.7}
+.content-section p{margin-bottom:1rem}
+
+.tools-grid h2{color:#2d3748;font-size:1.5rem;font-weight:700;margin:0 0 1.5rem 0}
+
+.tool-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+
+.tool-card{background:white;border:2px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-decoration:none;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+.tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#667eea,#764ba2);transform:scaleX(0);transition:transform 0.3s ease}
+.tool-card:hover::before{transform:scaleX(1)}
+.tool-card:hover{border-color:#667eea;transform:translateY(-4px);box-shadow:0 12px 24px rgba(102,126,234,0.15)}
+
+.tool-icon{font-size:2.5rem;margin-bottom:0.75rem;filter:grayscale(0.2);transition:all 0.3s ease}
+.tool-card:hover .tool-icon{filter:grayscale(0);transform:scale(1.1)}
+
+.tool-card h3{color:#2d3748;font-size:1.1rem;font-weight:600;margin:0 0 0.5rem 0;line-height:1.3}
+.tool-card p{color:#718096;font-size:0.9rem;margin:0;line-height:1.4}
+
+.no-tools{text-align:center;color:#718096;font-style:italic;padding:2rem;background:#f7fafc;border-radius:8px}
+
+.ad-container{display:flex;flex-direction:column;align-items:center;margin:2rem 0}
+.ad-primary{margin:1.5rem 0 2rem 0}
+.ad-secondary{margin:2.5rem 0}
+.ad-placeholder{background:linear-gradient(135deg,#f7fafc 0%,#edf2f7 100%);border:2px dashed #cbd5e0;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.ad-main{width:728px;height:90px;max-width:100%}
+.ad-second{width:336px;height:280px;max-width:100%}
+.ad-text{color:#a0aec0;font-size:0.85rem;font-weight:500}
+
+@media (max-width:768px){
+.ad-main{width:320px;height:50px}
+.ad-second{width:300px;height:250px}
+.page-hero{padding:2rem 1rem;margin:-1rem -1rem 1.5rem -1rem}
+.page-hero h1{font-size:1.6rem}
+.page-hero p{font-size:1rem}
+.tool-cards{grid-template-columns:1fr;gap:1rem}
+.tool-card{padding:1.25rem}
+}
+</style>
