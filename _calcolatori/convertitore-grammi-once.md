@@ -4,6 +4,7 @@ title: "Convertitore Grammi Once | g ↔ oz | Online Gratis"
 description: "Converti grammi in once e once in grammi istantaneamente. Calcolatore gratuito con tabella di conversione rapida."
 category: "convertitori-unita"
 subcategory: "peso"
+emoji: "⚖️"
 ---
 
 <div class="page-hero">
