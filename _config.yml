@@ -12,7 +12,7 @@ lang: "it"
 author: "Smart Converter Tools"
 locale: "it_IT"
 
-# Email contatto: vedi email-contact.svg (immagine anti-scraping)
+# Email contatto: vedi /assets/images/email-contact.svg (immagine anti-scraping)
 
 # Social (opzionale - compilare in futuro se necessario)
 # twitter_username: smartconvertertools
@@ -20,7 +20,7 @@ locale: "it_IT"
 
 # Build Settings
 markdown: kramdown
-theme: minima
+# theme: minima  # RIMOSSO - usiamo layout custom
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -83,8 +83,19 @@ encoding: utf-8
 sass:
   style: compressed
 
-# Google Analytics (PLACEHOLDER - sostituire con ID reale)
-# google_analytics: G-WGQ798BTJT
+# Google Analytics
+google_analytics: G-WGQ798BTJT
 
-# Google AdSense (PLACEHOLDER - sostituire con Publisher ID reale)
-# google_adsense: ca-pub-XXXXXXXXXXXXXXXX
+# Google AdSense
+# IMPORTANTE: Quando attivi AdSense, modifica solo questa sezione
+# 1. Cambia enabled: false in enabled: true
+# 2. Sostituisci publisher_id con il tuo ca-pub-XXXXXXXXXXXXXXXX
+# 3. Sostituisci gli slot ID con quelli delle tue ad units
+google_adsense:
+  enabled: false  # Cambia in true quando attivi AdSense
+  publisher_id: "ca-pub-XXXXXXXXXXXXXXXX"  # Il tuo Publisher ID AdSense
+  slots:
+    tool_header: "XXXXXXXXXX"    # Slot ID per banner header tool (728×90)
+    tool_footer: "XXXXXXXXXX"    # Slot ID per banner footer tool (728×90)
+    home_hero: "XXXXXXXXXX"      # Slot ID per banner hero homepage (728×90)
+    home_mid: "XXXXXXXXXX"       # Slot ID per banner mid homepage (336×280)
