@@ -1,0 +1,53 @@
+{% comment %}
+===========================================
+RELATED TOOLS - GENERATORE AUTOMATICO
+===========================================
+Genera 3 tool correlati basati su:
+1. PRIMA: Stessa subcategory (se esiste)
+2. POI: Stessa category
+3. FALLBACK: Random dalla collection
+
+Logic:
+- Esclude sempre la pagina corrente
+- Max 3 risultati
+- Shuffle per varietà
+===========================================
+{% endcomment %}
+
+{% assign related = "" | split: "" %}
+
+{% comment %} STEP 1: Cerca per subcategory (se esiste) {% endcomment %}
+{% if page.subcategory %}
+  {% assign by_subcategory = site.calcolatori | where: "subcategory", page.subcategory | where_exp: "item", "item.url != page.url" %}
+  {% assign related = related | concat: by_subcategory %}
+{% endif %}
+
+{% comment %} STEP 2: Se non bastano, aggiungi per category {% endcomment %}
+{% if related.size < 3 and page.category %}
+  {% assign by_category = site.calcolatori | where: "category", page.category | where_exp: "item", "item.url != page.url" %}
+  {% assign related = related | concat: by_category %}
+{% endif %}
+
+{% comment %} STEP 3: Rimuovi duplicati e limita a 3 {% endcomment %}
+{% assign related = related | uniq | slice: 0, 3 %}
+
+{% comment %} STEP 4: Se ancora non bastano (sito nuovo), prendi random {% endcomment %}
+{% if related.size < 3 %}
+  {% assign all_tools = site.calcolatori | where_exp: "item", "item.url != page.url" %}
+  {% assign related = related | concat: all_tools | uniq | slice: 0, 3 %}
+{% endif %}
+
+{% comment %} RENDER solo se ci sono tool correlati {% endcomment %}
+{% if related.size > 0 %}
+<div class="related-tools">
+  <h3>Convertitori correlati</h3>
+  <div class="related-grid">
+    {% for tool in related %}
+    <a href="{{ tool.url | relative_url }}" class="related-card">
+      <span class="related-icon">{{ tool.emoji | default: "🔧" }}</span>
+      <span class="related-title">{{ tool.title | remove: "Convertitore " | remove: "Calcolatore " | split: "|" | first | strip }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
