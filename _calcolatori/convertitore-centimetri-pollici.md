@@ -149,24 +149,3 @@ window.addEventListener('load', function() {
 </table>
 </div>
 </div>
-
-<div class="related-tools">
-
-### Convertitori correlati
-
-<div class="related-grid">
-  <a href="/smart-converter-tools/calcolatori/convertitore-metri-piedi/" class="related-card">
-    <span class="related-icon">📐</span>
-    <span class="related-title">Metri ↔ Piedi</span>
-  </a>
-  <a href="/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/" class="related-card">
-    <span class="related-icon">🚗</span>
-    <span class="related-title">Km ↔ Miglia</span>
-  </a>
-  <a href="/smart-converter-tools/calcolatori/convertitore-chilogrammi-libbre/" class="related-card">
-    <span class="related-icon">⚖️</span>
-    <span class="related-title">Kg ↔ Libbre</span>
-  </a>
-</div>
-
-</div>
