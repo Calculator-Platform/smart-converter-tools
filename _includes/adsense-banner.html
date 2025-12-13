@@ -1,0 +1,37 @@
+{% comment %}
+  AdSense Banner Include - Riutilizzabile
+  
+  Uso: {% include adsense-banner.html 
+           class="ad-primary" 
+           slot_id=site.google_adsense.slots.tool_header 
+           size="ad-main"
+           dimensions="728×90" %}
+  
+  Parametri:
+  - class: classe CSS container (ad-primary, ad-secondary, ad-hero)
+  - slot_id: ID slot AdSense dalla config
+  - size: classe CSS placeholder (ad-main, ad-leaderboard, ad-rectangle)
+  - dimensions: testo dimensioni (es. "728×90")
+{% endcomment %}
+
+{% if site.google_adsense.enabled %}
+<!-- AdSense Banner Attivo -->
+<div class="ad-container {{ include.class }}">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.google_adsense.publisher_id }}"
+       data-ad-slot="{{ include.slot_id }}"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+{% else %}
+<!-- Placeholder AdSense (durante sviluppo) -->
+<div class="ad-container {{ include.class }}">
+  <div class="ad-placeholder {{ include.size }}">
+    <span class="ad-text">Banner {{ include.dimensions }}</span>
+  </div>
+</div>
+{% endif %}
