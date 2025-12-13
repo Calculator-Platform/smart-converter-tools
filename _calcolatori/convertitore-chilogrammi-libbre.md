@@ -149,21 +149,3 @@ window.addEventListener('load', function() {
 </table>
 </div>
 </div>
-
-<div class="related-tools">
-<h3>Convertitori correlati</h3>
-<div class="related-grid">
-<a href="/smart-converter-tools/calcolatori/convertitore-grammi-once/" class="related-card">
-  <span class="related-icon">🍳</span>
-  <span class="related-title">Grammi ↔ Once</span>
-</a>
-<a href="/smart-converter-tools/calcolatori/convertitore-chilometri-miglia/" class="related-card">
-  <span class="related-icon">🚗</span>
-  <span class="related-title">Km ↔ Miglia</span>
-</a>
-<a href="/smart-converter-tools/calcolatori/convertitore-metri-piedi/" class="related-card">
-  <span class="related-icon">📐</span>
-  <span class="related-title">Metri ↔ Piedi</span>
-</a>
-</div>
-</div>
